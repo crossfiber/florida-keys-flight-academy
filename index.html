@@ -62,7 +62,6 @@
   --line-soft:rgba(20,33,31,0.08);
   --line-d:rgba(244,239,230,0.18);
   --line-d-soft:rgba(244,239,230,0.10);
-  --sh-sm:0 1px 2px rgba(4,41,58,0.06),0 4px 14px rgba(4,41,58,0.07);
   --sh-md:0 2px 4px rgba(4,41,58,0.07),0 14px 34px rgba(4,41,58,0.11);
   --nav-h:76px;--nav-h-sm:66px;
 }
@@ -74,23 +73,22 @@ a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:1260px;margin:0 auto;padding:0 40px}
 @media(max-width:900px){.wrap{padding:0 22px}}
-.rule{width:76px;height:4px;background:var(--sun);margin-bottom:20px;border-radius:2px}
-.eyebrow{display:inline-block;font-size:0.72rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--reef);margin-bottom:14px}
+.rule{width:76px;height:4px;background:var(--sun);margin-bottom:20px;}
 
 /* ---------- BUTTONS ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:52px;padding:15px 30px;background:var(--sun);color:#fff;font-weight:700;font-size:0.94rem;letter-spacing:0.005em;border:none;border-radius:999px;cursor:pointer;transition:background .18s,transform .15s,box-shadow .18s;box-shadow:0 4px 16px rgba(184,85,25,0.26)}
-.btn:hover{background:var(--sun-hot);transform:translateY(-2px);box-shadow:0 8px 22px rgba(184,85,25,0.32)}
-.btn-2{background:var(--deep);color:#fff;box-shadow:0 4px 16px rgba(4,41,58,0.22)}
-.btn-2:hover{background:var(--navy);box-shadow:0 8px 22px rgba(4,41,58,0.28)}
-.btn-ghost{background:transparent;color:#fff;border:1.6px solid rgba(255,255,255,0.55);box-shadow:none}
-.btn-ghost:hover{background:#fff;color:var(--deep);border-color:#fff;box-shadow:none}
-.btn-out{background:transparent;color:var(--deep);border:1.6px solid var(--deep);box-shadow:none}
-.btn-out:hover{background:var(--deep);color:#fff;box-shadow:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:15px 26px;background:var(--sun);color:#fff;font-weight:700;font-size:0.8rem;letter-spacing:0.09em;text-transform:uppercase;border:none;cursor:pointer;transition:background .18s,transform .15s}
+.btn:hover{background:var(--sun-hot);transform:translateY(-1px)}
+.btn-2{background:var(--deep);color:#fff}
+.btn-2:hover{background:var(--navy)}
+.btn-ghost{background:transparent;color:#fff;border:1.6px solid rgba(255,255,255,0.55)}
+.btn-ghost:hover{background:#fff;color:var(--deep);border-color:#fff}
+.btn-out{background:transparent;color:var(--deep);border:1.6px solid var(--deep)}
+.btn-out:hover{background:var(--deep);color:#fff}
 .btn-wide{width:100%}
-.tlink{display:inline-flex;align-items:center;gap:9px;min-height:44px;color:var(--sun);font-weight:700;font-size:0.9rem;transition:gap .2s,color .2s}
-.tlink:hover{gap:14px;color:var(--sun-hot)}
+.tlink{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--sun);font-weight:700;font-size:0.78rem;letter-spacing:0.09em;text-transform:uppercase;border-bottom:2px solid transparent;padding-bottom:2px;transition:gap .2s,color .2s,border-color .2s}
+.tlink:hover{gap:15px;color:var(--sun-hot);border-color:var(--sun-hot)}
 .tlink i{font-size:0.82em}
-.pill-phone{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;background:#fff;color:var(--deep);font-weight:800;font-size:1.02rem;border-radius:999px}
+.pill-phone{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;background:#fff;color:var(--deep);font-weight:800;font-size:1.02rem;}
 .pill-phone i{color:var(--sun)}
 
 /* ---------- NAV ---------- */
@@ -101,7 +99,7 @@ nav.site-nav.scrolled{box-shadow:0 2px 18px rgba(4,41,58,0.10)}
 .wordmark img{height:46px;width:auto}
 .wm-txt{display:flex;flex-direction:column;line-height:1.04}
 .wm-txt .t1{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:1rem;color:var(--deep);white-space:nowrap}
-.wm-txt .t2{font-size:0.58rem;font-weight:800;letter-spacing:0.17em;text-transform:uppercase;color:var(--reef);margin-top:3px;white-space:nowrap}
+.wm-txt .t2{font-size:0.58rem;font-weight:800;letter-spacing:0.17em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px;white-space:nowrap}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{font-weight:600;font-size:0.9rem;color:var(--ink);transition:color .2s}
 .nav-links a:hover{color:var(--sun)}
@@ -109,30 +107,28 @@ nav.site-nav.scrolled{box-shadow:0 2px 18px rgba(4,41,58,0.10)}
 .nav-phone{display:inline-flex;align-items:center;gap:9px;min-height:44px;font-weight:800;font-size:0.98rem;color:var(--deep)}
 .nav-phone i{color:var(--sun);font-size:0.88em}
 .nav-phone:hover{color:var(--sun)}
-.nav-cta{display:inline-flex;align-items:center;min-height:44px;padding:11px 22px;background:var(--sun);color:#fff;font-weight:700;font-size:0.86rem;border-radius:999px;transition:background .18s}
+.nav-cta{display:inline-flex;align-items:center;min-height:44px;padding:11px 20px;background:var(--sun);color:#fff;font-weight:700;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;transition:background .18s}
 .nav-cta:hover{background:var(--sun-hot)}
 @media(max-width:1080px){.nav-links,.nav-right .nav-phone,.nav-right .nav-cta{display:none}}
 .mobile-actions{display:none;gap:10px;align-items:center}
 @media(max-width:1080px){.mobile-actions{display:flex}}
-.mobile-call{width:46px;height:46px;background:var(--sun);color:#fff;display:inline-flex;align-items:center;justify-content:center;border-radius:999px}
-.hamburger{width:46px;height:46px;background:transparent;border:1.5px solid var(--line);border-radius:999px;cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
-.hamburger span{display:block;width:20px;height:2.4px;background:var(--deep);border-radius:2px}
-@media(max-width:640px){.nav-inner{padding:0 16px}.wordmark img{height:38px}.wm-txt .t1{font-size:0.84rem}.wm-txt .t2{display:none}}
-@media(max-width:380px){.wm-txt{display:none}}
+.mobile-call{width:46px;height:46px;background:var(--sun);color:#fff;display:inline-flex;align-items:center;justify-content:center;}
+.hamburger{width:46px;height:46px;background:transparent;border:1.5px solid var(--line);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
+.hamburger span{display:block;width:20px;height:2.4px;background:var(--deep);}
+@media(max-width:640px){.nav-inner{padding:0 16px}.wordmark img{height:40px}.wm-txt{display:none}}
+
 
 /* ---------- DRAWER ---------- */
 .nav-drawer{position:fixed;top:0;right:0;width:344px;max-width:89vw;height:100dvh;background:var(--deep);z-index:1001;transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top)}
 .nav-drawer.open{transform:translateX(0)}
 .drawer-header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line-d-soft)}
-.drawer-brand{display:inline-flex;align-items:center;gap:10px;background:var(--sand);padding:7px 12px;border-radius:8px}
+.drawer-brand{display:inline-flex;align-items:center;gap:10px;background:var(--sand);padding:7px 12px;}
 .drawer-brand img{height:32px;width:auto}
-.drawer-close{background:none;border:none;font-size:1.35rem;color:var(--sand);cursor:pointer;width:46px;height:46px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px}
+.drawer-close{background:none;border:none;font-size:1.35rem;color:var(--sand);cursor:pointer;width:46px;height:46px;display:inline-flex;align-items:center;justify-content:center;}
 .drawer-close:hover{color:var(--sun-brt)}
 .drawer-links{display:flex;flex-direction:column;flex:1;overflow-y:auto;min-height:0;padding:10px 0}
-.drawer-links a{display:flex;align-items:center;gap:14px;min-height:56px;padding:13px 22px;color:var(--sand);font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.2rem;border-bottom:1px solid var(--line-d-soft);transition:color .2s,background .2s,padding-left .2s}
-.drawer-links a i{color:var(--reef-lite);font-size:0.82rem;width:20px;text-align:center;transition:color .2s}
-.drawer-links a:hover{color:var(--sun-brt);background:rgba(244,239,230,0.05);padding-left:28px}
-.drawer-links a:hover i{color:var(--sun-brt)}
+.drawer-links a{display:flex;align-items:center;min-height:56px;padding:13px 22px;color:var(--sand);font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.2rem;border-bottom:1px solid var(--line-d-soft);transition:color .2s,background .2s,padding-left .2s}
+.drawer-links a:hover{color:var(--sun-brt);background:rgba(244,239,230,0.05);padding-left:30px}
 .drawer-footer{padding:18px 20px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line-d);background:rgba(0,0,0,0.18);display:flex;flex-direction:column;gap:11px}
 .nav-overlay{position:fixed;inset:0;background:rgba(4,20,28,0.66);z-index:1000;display:none}
 .nav-overlay.open{display:block}
@@ -144,7 +140,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:url('assets/hero-seven-mile.jpg');background-size:cover;background-position:center 42%;z-index:0}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(178deg,rgba(4,41,58,0.62) 0%,rgba(4,41,58,0.30) 30%,rgba(4,41,58,0.58) 66%,rgba(4,41,58,0.95) 100%);z-index:1}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1260px;margin:0 auto;padding:0 40px;color:#fff;display:flex;flex-direction:column}
-.hero-chip{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:9px 18px;border:1px solid rgba(255,255,255,0.34);border-radius:999px;font-size:0.72rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#fff;margin-bottom:26px;backdrop-filter:none;background:rgba(4,41,58,0.42)}
+.hero-chip{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;font-family:'JetBrains Mono',monospace;font-size:0.76rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:22px}
 .hero-chip b{color:var(--reef-lite);font-weight:700}
 .hero h1{font-size:clamp(2.35rem,5.4vw,4.5rem);font-weight:900;color:#fff;max-width:15.5ch;margin-bottom:24px;line-height:1.03}
 .hero .lede{font-size:clamp(1.06rem,1.55vw,1.3rem);color:rgba(255,255,255,0.9);max-width:56ch;margin-bottom:34px;line-height:1.56}
@@ -163,12 +159,12 @@ body.drawer-open .mobile-actions{visibility:hidden}
 }
 .hero-photo-m{display:none}
 @media(max-width:900px){
-  .hero-photo-m{display:block;aspect-ratio:16/10;margin-top:24px;border-radius:12px;background-image:url('assets/reef-lighthouse.jpg');background-size:cover;background-position:center;border:1px solid var(--line-d)}
+  .hero-photo-m{display:block;aspect-ratio:16/10;margin-top:24px;background-image:url('assets/reef-lighthouse.jpg');background-size:cover;background-position:center;border:1px solid var(--line-d)}
 }
 
 /* ---------- CREDENTIAL STRIP (overlaps hero) ---------- */
 .cred{position:relative;z-index:5;margin-top:-58px}
-.cred-inner{background:var(--sand-2);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh-md);display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:0}
+.cred-inner{background:var(--sand-2);border:1px solid var(--line);box-shadow:var(--sh-md);display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:0}
 .cred-cell{padding:26px 30px;display:flex;flex-direction:column;justify-content:center;gap:6px}
 .cred-cell:not(:last-child){border-right:1px solid var(--line-soft)}
 .cred-cell .ct{font-family:'Fraunces',Georgia,serif;font-size:1.42rem;font-weight:700;color:var(--deep);line-height:1.16}
@@ -177,7 +173,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .cred-cell i{color:var(--sun);font-size:0.95rem;margin-right:8px}
 @media(max-width:900px){
   .cred{margin-top:-30px}
-  .cred-inner{grid-template-columns:1fr 1fr;border-radius:12px}
+  .cred-inner{grid-template-columns:1fr 1fr;}
   .cred-cell{padding:17px 16px;gap:4px}
   .cred-cell:first-child{grid-column:1/-1;border-right:none;border-bottom:1px solid var(--line-soft)}
   .cred-cell:nth-child(2){border-right:1px solid var(--line-soft)}
@@ -194,7 +190,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .mech-body p{font-size:1.08rem;color:var(--ink-soft);line-height:1.74;margin-bottom:18px}
 .mech-body p:last-of-type{margin-bottom:0}
 .mech-body b{color:var(--ink);font-weight:700}
-.mech-note{margin-top:32px;padding:18px 22px;border-left:3px solid var(--reef);background:var(--sand-2);border-radius:0 10px 10px 0;font-size:0.98rem;color:var(--ink);line-height:1.62}
+.mech-note{margin-top:32px;padding:18px 22px;border-left:3px solid var(--reef);background:var(--sand-2);font-size:0.98rem;color:var(--ink);line-height:1.62}
 @media(max-width:900px){.mech{padding:60px 0 58px}.mech-grid{grid-template-columns:1fr;gap:22px}.mech-body p{font-size:1rem}}
 
 /* ---------- THREE DOORS ---------- */
@@ -202,32 +198,30 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .doors-head{max-width:60ch;margin-bottom:44px}
 .doors-head h2{font-size:clamp(1.8rem,3.3vw,2.7rem);color:var(--deep);margin-bottom:14px}
 .doors-head p{font-size:1.05rem;color:var(--ink-soft);line-height:1.66}
-.door-grid{display:grid;grid-template-columns:1.22fr 1fr 1fr;gap:22px;align-items:stretch}
-.door{background:var(--sand-2);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh-sm);transition:transform .2s,box-shadow .2s}
-.door:hover{transform:translateY(-3px);box-shadow:var(--sh-md)}
+.door-grid{display:grid;grid-template-columns:1.22fr 1fr 1fr;gap:48px;align-items:stretch}
+.door{display:flex;flex-direction:column}
 .door-photo{aspect-ratio:16/10;background-size:cover;background-position:center}
-.door-body{padding:26px 26px 24px;display:flex;flex-direction:column;flex:1}
-.door-tag{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--reef);margin-bottom:11px}
-.door-tag i{font-size:0.9em}
+.door-body{padding:20px 0 0;display:flex;flex-direction:column;flex:1}
+.door-tag{align-self:flex-start;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:1.04rem;color:var(--ink-soft);margin-bottom:8px}
 .door h3{font-size:1.42rem;color:var(--deep);margin-bottom:9px;line-height:1.15}
 .door:first-child h3{font-size:1.66rem}
 .door-desc{flex:1;font-size:0.97rem;color:var(--ink-soft);line-height:1.62;margin-bottom:16px}
 .door-price{font-family:'Fraunces',Georgia,serif;font-size:1.34rem;font-weight:700;color:var(--deep);margin-bottom:18px;padding-top:14px;border-top:1px solid var(--line-soft);line-height:1.2}
 .door-price span{display:block;font-family:'Hanken Grotesk',sans-serif;font-size:0.8rem;font-weight:600;color:var(--ink-soft);margin-top:3px}
 .door .btn,.door .tlink{margin-top:auto;align-self:flex-start}
-@media(max-width:1000px){.door-grid{grid-template-columns:1fr 1fr;gap:18px}.door:first-child{grid-column:1/-1;flex-direction:row}.door:first-child .door-photo{aspect-ratio:auto;flex:0 0 42%}.door:first-child .door-body{flex:1}}
+@media(max-width:1000px){.door-grid{grid-template-columns:1fr 1fr;gap:18px}.door:first-child{grid-column:1/-1;flex-direction:row;gap:26px}.door:first-child .door-photo{aspect-ratio:auto;flex:0 0 42%}.door:first-child .door-body{flex:1}}
 @media(max-width:900px){.doors{padding:60px 0}.doors-head{margin-bottom:28px}}
 @media(max-width:680px){
-  .door-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .door-grid{grid-template-columns:1fr 1fr;gap:26px 20px}
   .door:first-child{flex-direction:column}
   .door:first-child .door-photo{flex:none;aspect-ratio:16/9}
-  .door-body{padding:16px 15px 18px}
+  .door-body{padding:12px 0 0}
   .door h3,.door:first-child h3{font-size:1.06rem}
   .door-desc{font-size:0.84rem;margin-bottom:12px}
   .door-price{font-size:1.06rem;margin-bottom:12px}
   .door-price span{font-size:0.72rem}
   .door-tag{font-size:0.6rem;margin-bottom:8px}
-  .door .btn{width:100%;font-size:0.82rem;padding:12px 14px;min-height:46px}
+  .door .tlink{font-size:0.7rem}
 }
 
 /* ---------- FLIGHT LINE (signature, dark, full bleed) ---------- */
@@ -267,7 +261,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .band.left .band-text{margin-left:auto}
 .band.right .band-photo{order:2}
 .band.alt{background:var(--sand-2)}
-.band .bnum{font-family:'JetBrains Mono',monospace;font-size:0.76rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--reef);margin-bottom:14px}
+.band .bnum{font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-bottom:10px}
 .band h3{font-size:clamp(1.55rem,2.5vw,2.15rem);color:var(--deep);margin-bottom:13px}
 .band p{font-size:1.02rem;color:var(--ink-soft);line-height:1.68;margin-bottom:18px}
 .band .bprice{display:flex;align-items:baseline;gap:10px;padding:14px 0 16px;border-top:1px solid var(--line);margin-bottom:20px;flex-wrap:wrap}
@@ -311,10 +305,10 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .tours-head h2{font-size:clamp(1.85rem,3.3vw,2.7rem);color:var(--deep);margin-bottom:12px}
 .tours-head p{font-size:1.04rem;color:var(--ink-soft);max-width:52ch;line-height:1.64}
 /* featured tour: distinct horizontal layout, NOT a span inside the uniform grid */
-.feat{display:grid;grid-template-columns:1.15fr 1fr;background:var(--deep);border-radius:18px;overflow:hidden;margin-bottom:22px;box-shadow:var(--sh-md)}
+.feat{display:grid;grid-template-columns:1.15fr 1fr;background:var(--deep);overflow:hidden;margin-bottom:22px}
 .feat-photo{min-height:400px;background:url('assets/bahia-honda.jpg') center/cover}
 .feat-body{padding:clamp(30px,3.4vw,54px);color:var(--sand);display:flex;flex-direction:column;justify-content:center}
-.feat-tag{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:7px 15px;border-radius:999px;background:var(--sun-brt);color:#3A2000;font-size:0.68rem;font-weight:800;letter-spacing:0.13em;text-transform:uppercase;margin-bottom:16px}
+.feat-tag{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;color:var(--sun-brt);font-size:0.72rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:14px}
 .feat-body h3{font-size:clamp(1.7rem,2.9vw,2.4rem);color:#fff;margin-bottom:12px}
 .feat-body .fp{font-family:'Fraunces',Georgia,serif;font-size:2.1rem;font-weight:900;color:var(--sun-brt);margin-bottom:12px;line-height:1}
 .feat-body .fp span{font-family:'Hanken Grotesk',sans-serif;font-size:0.86rem;font-weight:600;color:rgba(244,239,230,0.7);margin-left:8px}
@@ -327,14 +321,13 @@ body.drawer-open .mobile-actions{visibility:hidden}
 @media(max-width:900px){.tours{padding:60px 0 26px}.tours-head{margin-bottom:26px}.feat-body{padding:24px 20px 28px}.feat-body p{font-size:0.95rem}.feat-list li{font-size:0.89rem}.feat-ctas{flex-direction:column;align-items:stretch}.feat-ctas .btn{width:100%}}
 /* uniform 2x2 grid, all cards equal */
 .tour-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.tour{background:var(--sand-2);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh-sm);transition:transform .2s,box-shadow .2s}
-.tour:hover{transform:translateY(-3px);box-shadow:var(--sh-md)}
+.tour{background:var(--sand-2);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
 .tour-photo{aspect-ratio:16/9;background-size:cover;background-position:center;position:relative}
-.tour-photo .tflag{position:absolute;top:14px;left:14px;padding:6px 13px;border-radius:999px;background:var(--sun-brt);color:#3A2000;font-size:0.63rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase}
+.tour-photo .tflag{position:absolute;top:14px;left:14px;padding:6px 13px;background:var(--sun-brt);color:#3A2000;font-size:0.63rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase}
 .tour-body{padding:24px 24px 22px;display:flex;flex-direction:column;flex:1}
 .tour h3{font-size:1.3rem;color:var(--deep);margin-bottom:8px;line-height:1.16}
-.tour .tmeta{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
-.tour .tmeta span{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;font-size:0.74rem;font-weight:600;color:var(--ink-soft);background:var(--sand)}
+.tour .tmeta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line-soft)}
+.tour .tmeta span{display:inline-flex;align-items:center;gap:7px;font-size:0.84rem;font-weight:600;color:var(--ink-soft)}
 .tour .tmeta i{color:var(--reef);font-size:0.8em}
 .tour-desc{flex:1;font-size:0.94rem;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
 .tour-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line-soft)}
@@ -345,13 +338,13 @@ body.drawer-open .mobile-actions{visibility:hidden}
   .tour-body{padding:15px 14px 17px}
   .tour h3{font-size:1rem}
   .tour .tmeta{gap:5px;margin-bottom:9px}
-  .tour .tmeta span{font-size:0.65rem;padding:4px 9px}
+  .tour .tmeta span{font-size:0.73rem}
   .tour-desc{font-size:0.83rem;margin-bottom:12px}
   .tour-foot{flex-direction:column;align-items:stretch;gap:10px;padding-top:11px}
   .tour-foot .tp{font-size:1.28rem}
   .tour-foot .btn{width:100%;font-size:0.8rem;padding:11px 12px;min-height:46px}
 }
-.tour-note{margin-top:26px;padding:20px 24px;background:var(--shell);border-radius:14px;display:flex;gap:16px;align-items:flex-start;font-size:0.97rem;color:var(--ink);line-height:1.62}
+.tour-note{margin-top:26px;padding:20px 24px;background:var(--shell);display:flex;gap:16px;align-items:flex-start;font-size:0.97rem;color:var(--ink);line-height:1.62}
 .tour-note i{color:var(--reef);font-size:1.1rem;margin-top:3px;flex-shrink:0}
 @media(max-width:900px){.tour-note{padding:16px 16px;font-size:0.9rem;gap:12px}}
 
@@ -361,12 +354,12 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .strip-head h3{font-size:clamp(1.4rem,2.3vw,1.9rem);color:var(--deep)}
 .strip-head p{font-size:0.98rem;color:var(--ink-soft);margin-top:6px;max-width:48ch;line-height:1.6}
 .strip-arrows{display:flex;gap:9px}
-.strip-arrows button{width:50px;height:50px;border:1.5px solid var(--line);background:transparent;color:var(--deep);cursor:pointer;font-size:0.95rem;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s}
+.strip-arrows button{width:50px;height:50px;border:1.5px solid var(--line);background:transparent;color:var(--deep);cursor:pointer;font-size:0.95rem;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s}
 .strip-arrows button:hover{background:var(--deep);color:var(--sand);border-color:var(--deep)}
 @media(max-width:900px){.strip-arrows{display:none}}
 .film{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 40px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-padding-left:40px}
 .film::-webkit-scrollbar{display:none}
-.frame{position:relative;flex:0 0 clamp(290px,38vw,470px);height:clamp(300px,42vh,380px);background-size:cover;background-position:center;scroll-snap-align:start;overflow:hidden;border-radius:14px}
+.frame{position:relative;flex:0 0 clamp(290px,38vw,470px);height:clamp(300px,42vh,380px);background-size:cover;background-position:center;scroll-snap-align:start;overflow:hidden;}
 .frame .cap{position:absolute;left:0;right:0;bottom:0;padding:42px 18px 15px;background:linear-gradient(0deg,rgba(4,41,58,0.9),rgba(4,41,58,0));color:#fff;font-weight:600;font-size:0.93rem}
 .frame .cap i{color:var(--reef-lite);margin-right:8px}
 @media(max-width:900px){.strip{padding:34px 0 58px}.strip-head{padding:0 22px;margin-bottom:18px}.film{padding:0 22px 8px;scroll-padding-left:22px}.frame{flex:0 0 80%;height:250px}}
@@ -386,7 +379,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .wb-specs div:nth-child(even){padding-left:20px}
 .wb-specs dt{font-size:0.72rem;font-weight:800;letter-spacing:0.13em;text-transform:uppercase;color:rgba(244,239,230,0.55);margin-bottom:5px}
 .wb-specs dd{font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;color:#fff}
-.wb-quote{margin:4px 0 26px;padding:18px 22px;background:rgba(244,239,230,0.06);border-left:3px solid var(--sun-brt);border-radius:0 10px 10px 0}
+.wb-quote{margin:4px 0 26px;padding:18px 22px;background:rgba(244,239,230,0.06);border-left:3px solid var(--sun-brt);}
 .wb-quote p{font-size:1rem;color:#fff;font-style:italic;margin-bottom:8px;line-height:1.6}
 .wb-quote cite{font-style:normal;font-size:0.84rem;color:rgba(244,239,230,0.66)}
 .wb-ctas{display:flex;gap:12px;flex-wrap:wrap}
@@ -404,8 +397,8 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .sol-grid{display:grid;grid-template-columns:1fr 0.86fr;gap:60px;align-items:start}
 .sol-body p{font-size:1.06rem;color:var(--ink-soft);line-height:1.76;margin-bottom:18px}
 .sol-body p b{color:var(--ink);font-weight:700}
-.sol-side{background:var(--sand-2);border:1px solid var(--line-soft);border-radius:16px;padding:30px;box-shadow:var(--sh-sm)}
-.sol-side h4{font-family:'Hanken Grotesk',sans-serif;font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--reef);margin-bottom:20px}
+.sol-side{background:var(--sand-2);border:1px solid var(--line);padding:30px}
+.sol-side h4{font-family:'Hanken Grotesk',sans-serif;font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--deep);margin-bottom:20px}
 .sol-side ul{list-style:none}
 .sol-side li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line-soft);font-size:0.96rem;color:var(--ink);line-height:1.55}
 .sol-side li:last-child{border-bottom:none;padding-bottom:0}
@@ -417,11 +410,11 @@ body.drawer-open .mobile-actions{visibility:hidden}
 /* ---------- PROOF ---------- */
 .proof{background:var(--shell);padding:96px 0}
 .proof-grid{display:grid;grid-template-columns:1.02fr 0.98fr;gap:52px;align-items:start}
-.qcard{background:var(--sand-2);border-radius:18px;padding:38px 36px;box-shadow:var(--sh-md);border:1px solid var(--line-soft)}
+.qcard{background:var(--sand-2);padding:38px 36px;border:1px solid var(--line)}
 .qcard .qmark{font-family:'Fraunces',Georgia,serif;font-size:3.4rem;font-weight:900;color:var(--reef);line-height:0.7;margin-bottom:14px;display:block}
 .qcard blockquote{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.2rem,2vw,1.58rem);font-weight:600;color:var(--deep);line-height:1.42;margin-bottom:22px}
 .qcard .qattr{display:flex;align-items:center;gap:13px;padding-top:18px;border-top:1px solid var(--line-soft)}
-.qcard .qav{width:46px;height:46px;border-radius:999px;background:var(--reef);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0}
+.qcard .qav{width:46px;height:46px;background:var(--reef);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0}
 .qcard .qn{font-weight:700;color:var(--ink);font-size:0.97rem;line-height:1.3}
 .qcard .qn span{display:block;font-weight:500;font-size:0.85rem;color:var(--ink-soft);margin-top:2px}
 .qcard .qsrc{margin-top:16px;font-size:0.82rem;color:var(--ink-soft)}
@@ -435,7 +428,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .outcomes .od p{font-size:0.91rem;color:var(--ink-soft);line-height:1.55}
 .proof-src{margin-top:18px;font-size:0.84rem;color:var(--ink-soft);line-height:1.6}
 .proof-src a{color:var(--sun);font-weight:600;border-bottom:1px solid rgba(184,85,25,0.35)}
-.ph-note{margin-top:22px;padding:15px 18px;border:1px dashed rgba(20,33,31,0.28);border-radius:12px;background:rgba(244,239,230,0.6);font-size:0.87rem;color:var(--ink-soft);line-height:1.55}
+.ph-note{margin-top:22px;padding:15px 18px;border:1px dashed rgba(20,33,31,0.28);background:rgba(244,239,230,0.6);font-size:0.87rem;color:var(--ink-soft);line-height:1.55}
 .ph-note b{color:var(--ink)}
 @media(max-width:940px){.proof-grid{grid-template-columns:1fr;gap:32px}}
 @media(max-width:900px){.proof{padding:58px 0}.qcard{padding:26px 22px}}
@@ -446,7 +439,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .locs-top h2{font-size:clamp(1.8rem,3.1vw,2.5rem);color:var(--deep);margin-bottom:14px}
 .locs-top p{font-size:1.02rem;color:var(--ink-soft);line-height:1.68}
 .loc-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.loc{background:var(--sand);border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh-sm)}
+.loc{background:var(--sand);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
 .loc-photo{aspect-ratio:16/9;background-size:cover;background-position:center}
 .loc-body{padding:24px 24px 22px;display:flex;flex-direction:column;flex:1}
 .loc .lid{font-family:'JetBrains Mono',monospace;font-size:0.86rem;font-weight:700;color:var(--reef);margin-bottom:7px}
@@ -481,8 +474,8 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .contact h2{font-size:clamp(1.85rem,3.2vw,2.6rem);color:var(--deep);margin-bottom:12px}
 .contact .csub{font-size:1.04rem;color:var(--ink-soft);line-height:1.66;margin-bottom:30px;max-width:46ch}
 .field{margin-bottom:20px}
-.field label{display:block;font-size:0.73rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--reef);margin-bottom:8px}
-.field input,.field select,.field textarea{width:100%;min-height:50px;padding:13px 16px;border:1.5px solid var(--line);background:var(--sand-2);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-size:1rem;border-radius:10px;transition:border-color .2s,box-shadow .2s}
+.field label{display:block;font-size:0.73rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:13px 16px;border:1.5px solid var(--line);background:var(--sand-2);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-size:1rem;transition:border-color .2s,box-shadow .2s}
 .field input::placeholder,.field textarea::placeholder{color:rgba(78,95,93,0.66)}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--reef);box-shadow:0 0 0 3px rgba(10,140,120,0.14)}
 .field textarea{resize:vertical;min-height:104px}
@@ -490,13 +483,13 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .field .msg{display:none;color:#96371F;font-size:0.83rem;margin-top:7px;font-weight:600}
 .field.err .msg{display:block}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.form-status{margin-top:16px;padding:14px 17px;font-size:0.95rem;display:none;border-radius:10px;line-height:1.55}
+.form-status{margin-top:16px;padding:14px 17px;font-size:0.95rem;display:none;line-height:1.55}
 .form-status.show{display:block}
 .form-status.success{background:rgba(10,140,120,0.12);color:#0A5F52;border:1px solid rgba(10,140,120,0.3)}
 .form-status.error{background:rgba(180,68,46,0.1);color:#96371F;border:1px solid rgba(180,68,46,0.28)}
 .form-status a{color:var(--sun);font-weight:700}
 .form-note{margin-top:14px;font-size:0.87rem;color:var(--ink-soft);line-height:1.55}
-.cside{background:var(--deep);color:var(--sand);border-radius:18px;padding:34px 32px;box-shadow:var(--sh-md)}
+.cside{background:var(--deep);color:var(--sand);padding:34px 32px}
 .cside h3{font-size:1.3rem;color:#fff;margin-bottom:20px}
 .cline{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line-d-soft);font-size:0.96rem;line-height:1.55;color:rgba(244,239,230,0.86)}
 .cline i{color:var(--reef-lite);font-size:1rem;margin-top:4px;width:20px;text-align:center;flex-shrink:0}
@@ -505,7 +498,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .cline b{display:block;color:#fff;font-weight:700;margin-bottom:2px}
 .cside .pill-phone{margin-top:22px;width:100%}
 .csocial{display:flex;gap:16px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line-d-soft)}
-.csocial a{width:44px;height:44px;border-radius:999px;border:1px solid var(--line-d);display:inline-flex;align-items:center;justify-content:center;color:var(--sand);font-size:1rem;transition:background .2s,color .2s,border-color .2s}
+.csocial a{width:44px;height:44px;border:1px solid var(--line-d);display:inline-flex;align-items:center;justify-content:center;color:var(--sand);font-size:1rem;transition:background .2s,color .2s,border-color .2s}
 .csocial a:hover{background:var(--sun);color:#fff;border-color:var(--sun)}
 @media(max-width:940px){.contact-grid{grid-template-columns:1fr;gap:32px}}
 @media(max-width:900px){.contact{padding:58px 0}.cside{padding:24px 20px}}
@@ -514,13 +507,13 @@ body.drawer-open .mobile-actions{visibility:hidden}
 /* ---------- FOOTER ---------- */
 footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
 .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.25fr;gap:40px}
-.foot-logo{display:inline-flex;background:var(--sand);padding:11px 15px;border-radius:10px;margin-bottom:18px}
+.foot-logo{display:inline-flex;background:var(--sand);padding:11px 15px;margin-bottom:18px}
 .foot-logo img{height:52px;width:auto}
 .foot-brand p{font-size:0.94rem;line-height:1.66;max-width:36ch;margin-bottom:18px}
 .foot-social{display:flex;gap:14px}
-.foot-social a{width:44px;height:44px;border-radius:999px;border:1px solid var(--line-d);display:inline-flex;align-items:center;justify-content:center;color:var(--sand);font-size:1rem;transition:background .2s,color .2s,border-color .2s}
+.foot-social a{width:44px;height:44px;border:1px solid var(--line-d);display:inline-flex;align-items:center;justify-content:center;color:var(--sand);font-size:1rem;transition:background .2s,color .2s,border-color .2s}
 .foot-social a:hover{background:var(--sun);color:#fff;border-color:var(--sun)}
-.foot-col h4{font-family:'Hanken Grotesk',sans-serif;font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--reef-lite);margin-bottom:16px}
+.foot-col h4{font-family:'Hanken Grotesk',sans-serif;font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(244,239,230,0.52);margin-bottom:16px}
 .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .foot-col a{font-size:0.94rem;transition:color .2s;color:rgba(244,239,230,0.78)}
 .foot-col a:hover{color:var(--sun-brt)}
@@ -635,14 +628,14 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
     <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
   <nav class="drawer-links">
-    <a href="#tours"><i class="fa-solid fa-binoculars"></i> Scenic Tours</a>
-    <a href="#training"><i class="fa-solid fa-plane-departure"></i> Flight Training</a>
-    <a href="#fleet"><i class="fa-solid fa-warehouse"></i> The Fleet</a>
-    <a href="#warbird"><i class="fa-solid fa-jet-fighter"></i> The Warbird</a>
-    <a href="#sol"><i class="fa-solid fa-anchor"></i> Who Teaches Here</a>
-    <a href="#locations"><i class="fa-solid fa-location-crosshairs"></i> Marathon &amp; Key West</a>
-    <a href="#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a>
-    <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+    <a href="#tours">Scenic Tours</a>
+    <a href="#training">Flight Training</a>
+    <a href="#fleet">The Fleet</a>
+    <a href="#warbird">The Warbird</a>
+    <a href="#sol">Who Teaches Here</a>
+    <a href="#locations">Marathon &amp; Key West</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
   </nav>
   <div class="drawer-footer">
     <a href="tel:+18445397247" class="pill-phone"><i class="fa-solid fa-phone-volume"></i> 844-KEYS-AIR</a>
@@ -659,8 +652,8 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
     <h1>Learn to fly over the only living coral reef in North America.</h1>
     <p class="lede">Flight training and scenic air tours from two Florida Keys airports. <b>Scenic tours from $299. Discovery flights $298.</b> Same airplane, same water, same view out the window. One of them comes with a logbook entry.</p>
     <div class="hero-ctas">
-      <a href="#tours" class="btn"><i class="fa-solid fa-binoculars"></i> See Scenic Tours</a>
-      <a href="#discovery" class="btn btn-ghost"><i class="fa-solid fa-plane-departure"></i> Take a Discovery Flight</a>
+      <a href="#tours" class="btn">See Scenic Tours</a>
+      <a href="#discovery" class="btn btn-ghost">Take a Discovery Flight</a>
     </div>
     <div class="hero-photo-m" role="img" aria-label="Sombrero Reef Lighthouse standing in turquoise water over the living coral reef off Marathon, Florida"></div>
   </div>
@@ -706,7 +699,6 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
 <section class="doors" id="discovery">
   <div class="wrap">
     <div class="doors-head">
-      <span class="eyebrow">Three ways up</span>
       <h2>Pick the one that matches why you are here.</h2>
       <p>Most flight schools only talk to future airline pilots. Most tour operators only talk to tourists. This is one operation that does both, honestly, at published prices.</p>
     </div>
@@ -715,33 +707,33 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
       <article class="door">
         <div class="door-photo" style="background-image:url('assets/reef-lighthouse.jpg')" role="img" aria-label="Sombrero Reef Lighthouse in turquoise water above the living coral reef, seen from the air"></div>
         <div class="door-body">
-          <span class="door-tag"><i class="fa-solid fa-binoculars"></i> Here on vacation</span>
+          <span class="door-tag">If you are here on vacation</span>
           <h3>Take a scenic air tour</h3>
           <p class="door-desc">Twenty minutes to a full hour over the reef, the Seven Mile Bridge, Bahia Honda and Pigeon Key. Up to three people in the airplane, all ages, every seat a window seat.<span class="m-trim"> No experience and no commitment.</span></p>
           <div class="door-price">From $299 <span>for the whole airplane, not per person</span></div>
-          <a href="#tours" class="btn">See the four tours <i class="fa-solid fa-arrow-right-long"></i></a>
+          <a href="#tours" class="tlink">See the four tours <i class="fa-solid fa-arrow-right-long"></i></a>
         </div>
       </article>
 
       <article class="door">
         <div class="door-photo" style="background-image:url('assets/cockpit-final.jpg')" role="img" aria-label="View over the shoulder of an instructor and student on final approach, runway ahead through the windscreen"></div>
         <div class="door-body">
-          <span class="door-tag"><i class="fa-solid fa-plane-departure"></i> Curious about flying</span>
+          <span class="door-tag">If the flying itself is the draw</span>
           <h3>Discovery flight</h3>
           <p class="door-desc">You fly it. An instructor handles the takeoff, then hands you the controls once you are clear of the field. <span class="m-trim">No experience needed, nothing to sign up for, and t</span><span class="m-only">T</span>he time is logged toward a Private certificate if you carry on.</p>
           <div class="door-price">$298 <span>one flight, per person, no deposit</span></div>
-          <a href="https://app.flightschedulepro.com/DiscoveryFlights/2c7c66c9-37ab-4746-b68e-c25c54c2e887" target="_blank" rel="noopener" class="btn">Book a discovery flight <i class="fa-solid fa-arrow-right-long"></i></a>
+          <a href="https://app.flightschedulepro.com/DiscoveryFlights/2c7c66c9-37ab-4746-b68e-c25c54c2e887" target="_blank" rel="noopener" class="tlink">Book a discovery flight <i class="fa-solid fa-arrow-right-long"></i></a>
         </div>
       </article>
 
       <article class="door">
         <div class="door-photo" style="background-image:url('assets/first-solo.jpg')" role="img" aria-label="Student celebrating with arms raised after a first solo flight while the instructor shakes his hand beside a Cessna"></div>
         <div class="door-body">
-          <span class="door-tag"><i class="fa-solid fa-id-card"></i> Going for a certificate</span>
+          <span class="door-tag">If you are going for the certificate</span>
           <h3>Train to a rating</h3>
           <p class="door-desc">Private, Instrument, Commercial and CFI, plus the complex and multi-engine time in between. Pay as you progress, no deposits, no cohort start dates<span class="m-trim">, and you fly with the person who owns the airplanes</span>.</p>
           <div class="door-price">From $265 <span>per hour, aircraft and instructor included</span></div>
-          <a href="#training" class="btn">See the training path <i class="fa-solid fa-arrow-right-long"></i></a>
+          <a href="#training" class="tlink">See the training path <i class="fa-solid fa-arrow-right-long"></i></a>
         </div>
       </article>
 
@@ -775,7 +767,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
 
     <div class="fleet-foot">
       <p class="src"><i class="fa-solid fa-file-signature"></i>Aircraft and years of manufacture as recorded in the FAA Aircraft Registry under Florida Keys Flight Academy LLC, 9850 Overseas Hwy, Marathon.</p>
-      <a href="#contact" class="btn"><i class="fa-solid fa-plane-up"></i> Ask what is on the schedule</a>
+      <a href="#contact" class="btn">Ask what is on the schedule</a>
     </div>
   </div>
 </section>
@@ -793,7 +785,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
   <div class="band left">
     <div class="band-photo" style="background-image:url('assets/cockpit-final.jpg')" role="img" aria-label="Instructor and student on final approach, runway centerline visible through the windscreen"></div>
     <div class="band-text">
-      <span class="bnum">Step 01 / Start here</span>
+      <span class="bnum">Where everyone starts</span>
       <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Discovery Flight<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
       <div class="band-collapse"><div class="band-collapse-inner">
       <p>The first one. You take the left seat, an instructor takes the right, and somewhere over the water they hand you the controls. It is not a ride. If you decide to carry on, the time is logged toward your Private certificate.</p>
@@ -806,7 +798,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
   <div class="band right alt">
     <div class="band-photo" style="background-image:url('assets/first-solo.jpg')" role="img" aria-label="A student celebrates after his first solo flight beside a blue and white Cessna at Marathon"></div>
     <div class="band-text">
-      <span class="bnum">Step 02 / Private Pilot</span>
+      <span class="bnum">The first certificate</span>
       <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Private Pilot Certificate<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
       <div class="band-collapse"><div class="band-collapse-inner">
       <p>Ground school and flight training to the certificate that lets you carry passengers. Written test prep with Gleim and Sporty's, one on one instruction, and a checkride you are genuinely ready for. You will solo out of an untowered field with real traffic and real Gulf weather, which is a better education than a controlled airport hands you.</p>
@@ -819,7 +811,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
   <div class="band left">
     <div class="band-photo" style="background-image:url('assets/redbird-sim.jpg')" role="img" aria-label="A student flying the Redbird TD2 simulator on a wraparound triple-monitor setup at Marathon"></div>
     <div class="band-text">
-      <span class="bnum">Step 03 / Instrument</span>
+      <span class="bnum">When the horizon disappears</span>
       <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Instrument Rating<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
       <div class="band-collapse"><div class="band-collapse-inner">
       <p>Flying on instruments alone, which in South Florida means summer build-ups, marine layer and haze over water with no horizon. Approaches at Marathon and Key West, plus procedures in the Redbird TD2 simulator so you burn less avgas learning the ones that are all button-pushing.</p>
@@ -832,7 +824,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
   <div class="band right alt">
     <div class="band-photo" style="background-image:url('assets/student-grad.jpg')" role="img" aria-label="A young Florida Keys Flight Academy student pilot standing beside a Cessna on the ramp"></div>
     <div class="band-text">
-      <span class="bnum">Step 04 / Commercial and CFI</span>
+      <span class="bnum">Getting paid to fly it</span>
       <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Commercial Pilot and CFI<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
       <div class="band-collapse"><div class="band-collapse-inner">
       <p>The certificate that lets you be paid to fly, then the one that lets you teach it. Commercial requires complex time and cross-country hours: the 1980 Cutlass covers the retractable-gear endorsement and the Cessna 310Q covers multi-engine, both in house. Several Keys students have gone from their first lesson here to a flight instructor certificate.</p>
@@ -882,7 +874,6 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
   <div class="wrap">
     <div class="tours-head">
       <div>
-        <span class="eyebrow">Scenic air tours</span>
         <h2>Four routes over the Middle Keys.</h2>
         <p>Prices are for the airplane, up to three people, not per seat. All ages. Every tour sees the Seven Mile Bridge or the Key West landmarks.</p>
       </div>
@@ -1110,7 +1101,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
             <h3>Marathon</h3>
             <address>9850 Overseas Hwy<br>Marathon, FL 33050</address>
             <div class="ldetail"><i class="fa-solid fa-stairs"></i>The office is upstairs at the EAA Air Museum. Untowered field, one runway, 5,008 feet, open since 1944.</div>
-            <a href="https://www.google.com/maps/search/?api=1&query=9850+Overseas+Hwy+Marathon+FL+33050" target="_blank" rel="noopener" class="btn btn-2"><i class="fa-solid fa-location-crosshairs"></i> Directions</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=9850+Overseas+Hwy+Marathon+FL+33050" target="_blank" rel="noopener" class="btn btn-2">Directions</a>
           </div>
         </article>
 
@@ -1121,7 +1112,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
             <h3>Key West</h3>
             <address>3471 South Roosevelt Blvd<br>Key West, FL 33040</address>
             <div class="ldetail"><i class="fa-solid fa-plane-arrival"></i>At Key West International, the bottom of the chain. Sunset flights and Key West landmark routes launch from here.</div>
-            <a href="https://www.google.com/maps/search/?api=1&query=3471+South+Roosevelt+Blvd+Key+West+FL+33040" target="_blank" rel="noopener" class="btn btn-2"><i class="fa-solid fa-location-crosshairs"></i> Directions</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=3471+South+Roosevelt+Blvd+Key+West+FL+33040" target="_blank" rel="noopener" class="btn btn-2">Directions</a>
           </div>
         </article>
 
@@ -1135,7 +1126,6 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
   <div class="wrap">
     <div class="faq-grid">
       <div class="faq-intro">
-        <span class="eyebrow">Before you call</span>
         <h2>The questions people actually ask.</h2>
         <p>Prices, ages, what happens on the day, and how flight training in the Keys really works. If yours is not here, call and ask. A pilot answers.</p>
         <a href="tel:+18445397247" class="btn btn-out"><i class="fa-solid fa-phone-volume"></i> 844-KEYS-AIR</a>
@@ -1214,7 +1204,7 @@ footer{background:var(--deep);color:rgba(244,239,230,0.78);padding:68px 0 30px}
             <label for="message">Anything useful to know</label>
             <textarea id="message" name="message" placeholder="Dates you are in the Keys, how many people, which airport suits you, and any experience you already have."></textarea>
           </div>
-          <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Send it over</button>
+          <button type="submit" class="btn">Send it over</button>
           <div class="form-status" id="formStatus"></div>
           <p class="form-note">We will only ever write back about the flight you asked about.</p>
         </form>
