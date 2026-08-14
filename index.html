@@ -200,14 +200,17 @@ body.drawer-open .mobile-actions{visibility:hidden}
 
 /* FLIGHT LINE (dark full-bleed) */
 .fleet{background:var(--deep);color:var(--sand);padding:110px 0 100px;position:relative}
-.fleet-head{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:end;margin-bottom:50px}
+.fleet-head{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start;margin-bottom:50px}
+.fleet-fig{margin:30px 0 0}
+.fleet-fig img{width:100%;max-width:430px;border-radius:12px;border:1px solid var(--line-d)}
+.fleet-fig figcaption{font-size:0.84rem;color:rgba(244,239,230,0.6);padding:10px 2px 0;line-height:1.5;max-width:430px}
 .fleet-yr{font-family:'Fraunces',Georgia,serif;font-size:clamp(4.2rem,11vw,8rem);font-weight:600;line-height:0.82;color:var(--sun-brt);letter-spacing:-0.02em}
 .fleet-yr small{display:block;font-family:'Hanken Grotesk',sans-serif;font-size:0.14em;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--reef-lite);margin-top:16px;line-height:1.5}
 .fleet-head h2{font-size:clamp(1.75rem,3.1vw,2.5rem);color:#fff;margin-bottom:16px;line-height:1.14}
 .fleet-head h2 em{font-style:italic;font-weight:500;color:var(--sun-brt)}
 .fleet-head p{font-size:1.02rem;color:rgba(244,239,230,0.78);line-height:1.72;max-width:56ch}
 .fleet-head p b{color:#fff;font-weight:700}
-.roster{display:grid;grid-template-columns:1fr 1fr;gap:0 52px;border-top:1px solid var(--line-d)}
+.roster{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-d);max-width:860px}
 .rrow{display:grid;grid-template-columns:96px 54px 1fr;gap:16px;align-items:baseline;padding:15px 2px;border-bottom:1px solid var(--line-d-soft)}
 .rrow .rn{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:0.86rem;color:var(--reef-lite)}
 .rrow .ry{font-size:0.85rem;font-weight:600;color:rgba(244,239,230,0.5)}
@@ -216,8 +219,8 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .rrow.hero-row .rn{color:var(--sun-brt)}
 .fleet-foot{margin-top:34px;padding-top:22px;border-top:1px solid var(--line-d-soft);display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
 .fleet-foot .src{font-size:0.85rem;color:rgba(244,239,230,0.55);line-height:1.55;max-width:52ch}
-@media(max-width:1000px){.fleet-head{grid-template-columns:1fr;gap:24px;align-items:start;margin-bottom:32px}.roster{grid-template-columns:1fr}}
-@media(max-width:900px){.fleet{padding:60px 0 58px}.fleet-head p{font-size:0.97rem}}
+@media(max-width:1000px){.fleet-head{grid-template-columns:1fr;gap:24px;align-items:start;margin-bottom:32px}}
+@media(max-width:900px){.fleet{padding:60px 0 58px}.fleet-head p{font-size:0.97rem}.fleet-fig{margin-top:20px}.fleet-fig img{max-width:none}.fleet-fig figcaption{max-width:none}}
 @media(max-width:520px){.rrow{grid-template-columns:86px 1fr;gap:6px 12px;padding:13px 2px}.rrow .ry{display:none}.rrow .rt{font-size:0.9rem}.rrow .rt em{font-size:0.79rem}}
 
 /* TRAINING */
@@ -259,12 +262,12 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .pilot h2{font-size:clamp(1.6rem,2.7vw,2.25rem);color:var(--deep);max-width:26ch;margin-bottom:34px}
 .pilot h2 em{font-style:italic;font-weight:500;color:var(--reef)}
 .pilot-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.pitem{padding:24px 24px 24px 0;border-top:2px solid var(--deep)}
+.pitem{padding:24px 24px 24px 0;border-top:2px solid var(--deep);display:flex;flex-direction:column}
 .pitem:not(:last-child){border-right:1px solid var(--line-soft)}
 .pitem:not(:first-child){padding-left:24px}
 .pitem h4{font-family:'Hanken Grotesk',sans-serif;font-size:1.06rem;font-weight:800;color:var(--deep);margin-bottom:7px}
-.pitem p{font-size:0.9rem;color:var(--ink-soft);line-height:1.56}
-.pitem .pp{display:block;margin-top:10px;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--sun)}
+.pitem p{font-size:0.9rem;color:var(--ink-soft);line-height:1.56;flex:1}
+.pitem .pp{display:block;margin-top:auto;padding-top:12px;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--sun)}
 @media(max-width:900px){.pilot{padding:56px 0}.pilot h2{margin-bottom:24px}.pilot-grid{grid-template-columns:1fr 1fr}.pitem:nth-child(2){border-right:none}.pitem:nth-child(odd){padding-left:0}.pitem:nth-child(even){padding-left:22px}}
 @media(max-width:520px){.pitem{padding:16px 10px 18px 0}.pitem:nth-child(even){padding-left:14px}.pitem h4{font-size:0.95rem}.pitem p{font-size:0.82rem}}
 
@@ -283,7 +286,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .tr-main{padding:20px 0}
 .tr-photo{height:112px;background-size:cover;background-position:center;border:1px solid var(--line);border-radius:8px}
 .tr-main h3{font-size:1.3rem;color:var(--deep);margin-bottom:5px}
-.tr-main .tr-meta{font-size:0.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:6px}
+.tr-main .tr-meta{font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--sun-deep);margin-bottom:7px}
 .tr-main p{font-size:0.94rem;color:var(--ink-soft);line-height:1.58;max-width:58ch}
 .tr-price{position:relative;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:16px 24px;border-left:1.5px dashed var(--line)}
 .tr-price::before,.tr-price::after{content:'';position:absolute;left:-11px;width:20px;height:20px;border-radius:50%;background:var(--sand);border:1px solid var(--line)}
@@ -681,29 +684,28 @@ body.modal-open{overflow:hidden}
 <section class="fleet" id="fleet">
   <div class="wrap">
     <div class="fleet-head">
-      <div class="fleet-yr">1942<small>Oldest airframe on the line</small></div>
+      <div>
+        <div class="fleet-yr">1942<small>Oldest airframe on the line</small></div>
+        <figure class="fleet-fig">
+          <img src="assets/bt13-ramp.jpg" alt="The restored 1942 Vultee BT-13 on the ramp at Marathon in July 2022, polished aluminum with a red cowl" loading="lazy" width="800" height="514">
+          <figcaption>On the ramp at Marathon, July 2022. The oldest working airplane in the Keys.</figcaption>
+        </figure>
+      </div>
       <div>
         <h2>Ten airplanes. The newest one is <em>from 1980.</em></h2>
-        <p>Most schools hand you a glass-panel trainer built this decade and a subscription to go with it. Ours are older than that, and it is deliberate: <b>you learn to fly the airplane, not the screen.</b> Stick, rudder, a paper chart and a window. Every tail number below is registered to Florida Keys Flight Academy LLC at Marathon.</p>
+        <p>Most schools hand you a glass-panel trainer built this decade and a subscription to go with it. Ours are older than that, and it is deliberate: <b>you learn to fly the airplane, not the screen.</b> Stick, rudder, a paper chart and a window. These three headline a ten-aircraft line, every one registered to Florida Keys Flight Academy LLC at Marathon.</p>
       </div>
     </div>
 
     <div class="roster">
-      <div class="rrow hero-row"><span class="rn">N67496</span><span class="ry">1942</span><span class="rt">Consolidated Vultee BT-13A<em>The warbird. Pratt &amp; Whitney R-985 radial.</em></span></div>
-      <div class="rrow"><span class="rn">N9100</span><span class="ry">1947</span><span class="rt">North American Navion<em>Post-war four-seat tourer.</em></span></div>
-      <div class="rrow"><span class="rn">N6963A</span><span class="ry">1956</span><span class="rt">Cessna 172<em>Straight-tail. Continental O-300.</em></span></div>
-      <div class="rrow"><span class="rn">N6354W</span><span class="ry">1964</span><span class="rt">Piper PA-28-140 Cherokee<em>Low-wing primary trainer.</em></span></div>
-      <div class="rrow"><span class="rn">N5434R</span><span class="ry">1965</span><span class="rt">Cessna 172F<em>Primary trainer.</em></span></div>
-      <div class="rrow"><span class="rn">N6906Q</span><span class="ry">1967</span><span class="rt">Beechcraft A23-19 Musketeer Sport<em>Lycoming O-320.</em></span></div>
-      <div class="rrow"><span class="rn">N20050</span><span class="ry">1972</span><span class="rt">Cessna 172M<em>The workhorse of the fleet.</em></span></div>
-      <div class="rrow"><span class="rn">N110CS</span><span class="ry">1972</span><span class="rt">Cessna 310Q<em>Twin engine. Multi-engine time without leaving the ramp.</em></span></div>
-      <div class="rrow"><span class="rn">N4939V</span><span class="ry">1980</span><span class="rt">Cessna 172RG Cutlass<em>Retractable gear and constant-speed prop. Your complex endorsement.</em></span></div>
-      <div class="rrow"><span class="rn">N587FL</span><span class="ry">PA28</span><span class="rt">Piper PA-28-140<em>Second Cherokee on the line.</em></span></div>
+      <div class="rrow hero-row"><span class="rn">N67496</span><span class="ry">1942</span><span class="rt">Consolidated Vultee BT-13A<em>The warbird. The WWII trainer, restored, with a Pratt &amp; Whitney R-985 radial up front.</em></span></div>
+      <div class="rrow"><span class="rn">N110CS</span><span class="ry">1972</span><span class="rt">Cessna 310Q<em>The twin. Multi-engine time without leaving the ramp, rare for a school this size.</em></span></div>
+      <div class="rrow"><span class="rn">N4939V</span><span class="ry">1980</span><span class="rt">Cessna 172RG Cutlass<em>Retractable gear and a constant-speed prop. Your complex endorsement lives here.</em></span></div>
     </div>
 
     <div class="fleet-foot">
-      <p class="src">Aircraft and years of manufacture as recorded in the FAA Aircraft Registry under Florida Keys Flight Academy LLC, 9850 Overseas Hwy, Marathon.</p>
-      <button class="btn" data-book="Flight training (from $265/hr)">Ask what is on the schedule</button>
+      <p class="src">Three of ten. Every aircraft and year is as recorded in the FAA Aircraft Registry under Florida Keys Flight Academy LLC at Marathon.</p>
+      <a href="fleet/" class="btn">See all ten aircraft</a>
     </div>
   </div>
 </section>
