@@ -113,7 +113,6 @@ nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h)
 .drawer-close:hover{color:var(--sun-brt)}
 .drawer-links{display:flex;flex-direction:column;flex:1;overflow-y:auto;min-height:0;padding:8px 0}
 .drawer-links a{padding:16px 22px;color:var(--sand);font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.18rem;border-bottom:1px solid var(--line-d-soft);transition:color .2s,background .2s,padding-left .2s}
-.drawer-links a .dn{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:0.7rem;color:var(--sun-soft);width:32px;display:inline-block;letter-spacing:0.05em}
 .drawer-links a:hover{color:var(--sun-brt);background:rgba(244,239,230,0.05);padding-left:30px}
 .drawer-footer{padding:18px 22px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line-d);background:rgba(244,239,230,0.05);display:flex;flex-direction:column;gap:12px}
 .drawer-phone{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:var(--deep);font-weight:700;font-size:1.05rem;padding:13px;border-radius:6px}
@@ -167,10 +166,10 @@ body.drawer-open .mobile-actions{visibility:hidden}
 @media(max-width:900px){.rateboard{margin-top:-66px;padding:0 22px}.rb-cell{padding:18px 18px 16px}.rb-cell .rb-price{font-size:1.4rem}.rb-cell .rb-meta{font-size:0.76rem}}
 
 /* SAME FORTY MINUTES */
-.mech{padding:118px 0 104px}
-.mech-quote{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.22;color:var(--deep);max-width:26ch;margin-bottom:48px}
+.mech{padding:96px 0 88px}
+.mech-quote{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.22;color:var(--deep);max-width:26ch;margin-bottom:32px}
 .mech-quote b{font-style:normal;font-weight:600;color:var(--reef-deep)}
-.mech-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:start}
+.mech-grid{display:grid;grid-template-columns:1fr;max-width:760px}
 .mech-copy p{font-size:1.07rem;color:var(--ink-soft);line-height:1.74;margin-bottom:18px}
 .mech-copy p b{color:var(--deep);font-weight:700}
 .mech-facts{display:flex;gap:0;margin:30px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -178,17 +177,14 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .mech-facts .mf:not(:first-child){padding-left:20px;border-left:1px solid var(--line-soft)}
 .mech-facts .mf b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.35rem;color:var(--deep);line-height:1.15}
 .mech-facts .mf span{font-size:0.84rem;color:var(--ink-soft)}
-.mech-note{background:var(--sand-2);border:1px solid var(--line);border-radius:12px;padding:26px 28px;font-size:1rem;color:var(--ink);line-height:1.68}
-.mech-note b{color:var(--deep)}
-.mech-note .tlink{margin-top:16px}
-@media(max-width:920px){.mech{padding:64px 0 58px}.mech-quote{margin-bottom:30px}.mech-grid{grid-template-columns:1fr;gap:26px}.mech-facts .mf{padding:14px 10px 14px 0}.mech-facts .mf:not(:first-child){padding-left:10px}.mech-facts .mf b{font-size:1.05rem}.mech-facts .mf span{font-size:0.74rem;line-height:1.35;display:block}.mech-note{padding:20px 20px}}
+@media(max-width:920px){.mech{padding:64px 0 58px}.mech-quote{margin-bottom:30px}.mech-facts .mf{padding:14px 10px 14px 0}.mech-facts .mf:not(:first-child){padding-left:10px}.mech-facts .mf b{font-size:1.05rem}.mech-facts .mf span{font-size:0.74rem;line-height:1.35;display:block}}
 
 /* THREE DOORS (cards, Poppa fleet style) */
 .doors{padding:96px 0 104px;background:var(--shell)}
-.doors-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:44px}
+.doors-head{margin-bottom:44px}
 .doors-head h2{font-size:clamp(1.9rem,3.6vw,3rem);color:var(--deep);max-width:19ch}
 .doors-head h2 em{font-style:italic;font-weight:500;color:var(--reef)}
-.doors-head p{font-size:0.98rem;color:var(--ink-soft);max-width:36ch;line-height:1.6;padding-bottom:6px}
+.doors-head p{font-size:1.02rem;color:var(--ink-soft);max-width:52ch;line-height:1.6;margin-top:12px}
 .door-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .door{display:flex;flex-direction:column;align-items:center;text-align:center}
 .door-photo{height:280px;width:100%;background-size:cover;background-position:center;border-radius:180px 180px 14px 14px;border:1px solid var(--line)}
@@ -199,7 +195,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .door-price{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.3rem;color:var(--deep);margin-top:14px}
 .door-price small{font-family:'Hanken Grotesk',sans-serif;font-size:0.78rem;font-weight:600;color:var(--ink-soft);margin-left:7px}
 .door-body .tlink{margin-top:14px}
-@media(max-width:1000px){.doors{padding:58px 0 64px}.doors-head{grid-template-columns:1fr;gap:8px;margin-bottom:28px}.door-grid{grid-template-columns:1fr 1fr}.door:last-child{grid-column:1/-1}.door-photo{height:210px;border-radius:130px 130px 12px 12px}}
+@media(max-width:1000px){.doors{padding:58px 0 64px}.doors-head{margin-bottom:28px}.door-grid{grid-template-columns:1fr 1fr}.door:last-child{grid-column:1/-1}.door-photo{height:210px;border-radius:130px 130px 12px 12px}}
 @media(max-width:560px){.door-grid{grid-template-columns:1fr 1fr;gap:18px 14px}.door:last-child{grid-column:auto}.door-photo{height:150px;border-radius:90px 90px 8px 8px}.door-body{padding:12px 2px 0}.door-body h3{font-size:1.02rem}.door-body p{font-size:0.82rem}.door-price{font-size:1.05rem}.door-price small{display:block;margin:2px 0 0}.door-body .tlink{font-size:0.7rem;margin-top:12px}}
 @media(max-width:560px){.door:first-child{grid-column:1/-1}.door:first-child .door-photo{height:160px}}
 
@@ -228,77 +224,42 @@ body.drawer-open .mobile-actions{visibility:hidden}
 @media(max-width:900px){.fleet{padding:60px 0 58px}.fleet-head p{font-size:0.97rem}.fleet-fig{margin-top:20px}.fleet-fig img{max-height:260px;object-fit:cover}}
 @media(max-width:520px){.rrow{grid-template-columns:86px 1fr;gap:6px 12px;padding:13px 2px}.rrow .ry{display:none}.rrow .rt{font-size:0.9rem}.rrow .rt em{font-size:0.79rem}}
 
-/* TRAINING */
-.ladder-intro{padding:110px 0 46px}
-.ladder-intro .ladder-quote{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(1.6rem,3.2vw,2.6rem);line-height:1.22;color:var(--deep);max-width:24ch;margin-bottom:20px}
-.ladder-intro .ladder-quote b{font-style:normal;font-weight:600;color:var(--reef-deep)}
-.ladder-intro p{font-size:1.05rem;color:var(--ink-soft);line-height:1.72;max-width:62ch}
-@media(max-width:900px){.ladder-intro{padding:58px 0 24px}.ladder-intro p{font-size:0.98rem}}
-.bands{border-top:1px solid var(--line)}
-.band{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;border-bottom:1px solid var(--line)}
-.band-photo{min-height:440px;background-size:cover;background-position:center}
-.band-text{padding:clamp(38px,4.6vw,74px);display:flex;flex-direction:column;justify-content:center;max-width:660px}
-.band.left .band-text{margin-left:auto}
-.band.right .band-photo{order:2}
-.band.alt{background:var(--sand-2)}
-.band .bnum{display:inline-flex;font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:1.02rem;color:var(--ink-soft);margin-bottom:10px}
-.band-h{margin-bottom:13px}
-.band-toggle{all:unset;display:block;box-sizing:border-box;width:100%;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:inherit;line-height:1.12;letter-spacing:-0.005em;color:var(--deep);cursor:default}
-.band-toggle i{display:none}
-.band-collapse{max-height:none;overflow:visible}
-@media(max-width:900px){
-  .band-toggle{cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px}
-  .band-toggle i{display:inline-block;font-size:0.95rem;color:var(--sun);transition:transform .3s;flex-shrink:0}
-  .band.open .band-toggle i{transform:rotate(45deg)}
-  .band-collapse{max-height:0;overflow:hidden;transition:max-height .34s ease}
-  .band-collapse-inner{padding-top:4px}
-  .band-photo{max-height:0;overflow:hidden;transition:max-height .34s ease;aspect-ratio:auto}
-  .band.open .band-photo{max-height:480px}
-  .band-photo::before{content:'';display:block;aspect-ratio:2.1/1}
-  .band-h{margin-bottom:0}
-  .band.open .band-h{margin-bottom:10px}
-  .band-text{padding:16px 22px 18px}
-  .band.open .band-text{padding-bottom:30px}
-}
-.band h3,.band .band-h{font-size:clamp(1.55rem,2.5vw,2.15rem)}
-.band p{font-size:1.02rem;color:var(--ink-soft);line-height:1.68;margin-bottom:18px}
-.band .bprice{display:flex;align-items:baseline;gap:10px;padding:14px 0 16px;border-top:1px solid var(--line);margin-bottom:18px;flex-wrap:wrap}
-.band .bprice .bp{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.5rem;color:var(--deep)}
-.band .bprice .bl{font-size:0.88rem;color:var(--ink-soft);font-weight:500}
-@media(max-width:900px){
-  .band{grid-template-columns:1fr}
-  .band-photo{min-height:0;order:1 !important}
-  .band-text{order:2;padding:20px 22px 30px;max-width:none;margin:0 !important}
-  .band-h{margin-bottom:10px}
-  .band-toggle{font-size:1.32rem}
-  .band p{font-size:0.96rem;margin-bottom:14px}
-  .band .bprice{padding:12px 0 14px;margin-bottom:14px}
-  .band .bprice .bp{font-size:1.26rem}
-}
-
-/* ALREADY A PILOT */
-.pilot{background:var(--sand-2);padding:88px 0;border-bottom:1px solid var(--line-soft)}
-.pilot h2{font-size:clamp(1.6rem,2.7vw,2.25rem);color:var(--deep);max-width:26ch;margin-bottom:34px}
-.pilot h2 em{font-style:italic;font-weight:500;color:var(--reef)}
-.pilot-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.pitem{padding:24px 24px 24px 0;border-top:2px solid var(--deep);display:flex;flex-direction:column}
-.pitem:not(:last-child){border-right:1px solid var(--line-soft)}
-.pitem:not(:first-child){padding-left:24px}
-.pitem h4{font-family:'Hanken Grotesk',sans-serif;font-size:1.06rem;font-weight:800;color:var(--deep);margin-bottom:7px}
-.pitem p{font-size:0.9rem;color:var(--ink-soft);line-height:1.56;flex:1}
-.pitem .pp{display:block;margin-top:auto;padding-top:12px;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--deep)}
-@media(max-width:900px){.pilot{padding:56px 0}.pilot h2{margin-bottom:24px}.pilot-grid{grid-template-columns:1fr 1fr}.pitem:nth-child(2){border-right:none}.pitem:nth-child(odd){padding-left:0}.pitem:nth-child(even){padding-left:22px}}
-@media(max-width:520px){.pitem{padding:16px 10px 18px 0}.pitem:nth-child(even){padding-left:14px}.pitem h4{font-size:0.95rem}.pitem p{font-size:0.82rem}}
+/* TRAINING (one photo, dense list) */
+.train{padding:104px 0 100px}
+.ladder-quote{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(1.6rem,3.2vw,2.6rem);line-height:1.22;color:var(--deep);max-width:24ch;margin-bottom:16px}
+.ladder-quote b{font-style:normal;font-weight:600;color:var(--reef-deep)}
+.train-lede{font-size:1.05rem;color:var(--ink-soft);line-height:1.72;max-width:62ch;margin-bottom:48px}
+.train-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:start}
+.train-fig{position:sticky;top:calc(var(--nav-h) + 32px)}
+.train-fig img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.train-fig figcaption{font-size:0.86rem;color:var(--ink-soft);padding:10px 2px 0;line-height:1.5}
+.train-list{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:1fr 200px;gap:28px;padding:22px 0;border-bottom:1px solid var(--line)}
+.trow h3{font-size:1.25rem;color:var(--deep);margin-bottom:6px}
+.trow p{font-size:0.95rem;color:var(--ink-soft);line-height:1.6;max-width:52ch}
+.trow-side{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.trow-side .tp{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.3rem;color:var(--deep);line-height:1.1}
+.trow-side .tl{font-size:0.8rem;color:var(--ink-soft);line-height:1.4}
+.trow-side .tlink{margin-top:8px;font-size:0.76rem}
+.trow-pilot{background:var(--sand-2);margin:0 -18px;padding:22px 18px;border-radius:10px;border-bottom:none}
+.train-quote{margin-top:28px;padding:22px 24px;background:var(--white);border:1px solid var(--line-soft);border-radius:12px;box-shadow:0 8px 24px rgba(20,33,31,0.05)}
+.train-quote p{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:1.08rem;line-height:1.5;color:var(--deep);margin-bottom:10px}
+.train-quote cite{font-style:normal;font-size:0.84rem;color:var(--ink-soft)}
+.train-quote cite a{color:var(--reef-deep);font-weight:600;border-bottom:1px solid rgba(10,107,92,0.35)}
+@media(max-width:1000px){.train-grid{grid-template-columns:1fr;gap:30px}.train-fig{position:static}.train-fig img{aspect-ratio:2/1}}
+@media(max-width:900px){.train{padding:60px 0 56px}.train-lede{font-size:0.98rem;margin-bottom:26px}.trow{grid-template-columns:1fr;gap:10px;padding:18px 0}.trow h3{font-size:1.1rem}.trow p{font-size:0.9rem}.trow-side{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:6px 12px}.trow-side .tp{font-size:1.15rem}.trow-side .tlink{margin-top:0;width:100%}.trow-pilot{margin:0;padding:18px 14px}.train-quote{display:none}}
 
 /* TOURS & RATES (trip rows) */
 .trips{padding:104px 0}
-.trips-head{margin-bottom:16px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.trips-head{margin-bottom:8px}
 .trips-head h2{font-size:clamp(2rem,3.8vw,3.1rem);color:var(--deep);max-width:19ch}
 .trips-head h2 em{font-style:italic;font-weight:500;color:var(--reef)}
-.trips-head .incl{font-size:0.92rem;color:var(--ink-soft);max-width:40ch;line-height:1.6;padding-bottom:6px}
+.trips-head .incl{font-size:1.02rem;color:var(--ink-soft);max-width:52ch;line-height:1.6;margin-top:12px}
 .trips-head .incl b{color:var(--deep)}
-.trip-group{margin-top:38px}
-.trip-group .tg-label{display:flex;align-items:center;gap:18px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:1.3rem;color:var(--deep);margin-bottom:16px}
+.trip-group{margin-top:48px}
+.trip-group .tg-label{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-bottom:12px;margin-bottom:18px;border-bottom:2px solid var(--deep)}
+.trip-group .tg-label h3{font-size:clamp(1.35rem,2.2vw,1.7rem);color:var(--deep)}
+.trip-group .tg-label span{font-size:0.9rem;font-weight:600;color:var(--ink-soft)}
 .trip-row{position:relative;display:grid;grid-template-columns:150px 1fr 210px;gap:26px;align-items:center;padding:0 0 0 20px;background:var(--white);border:1px solid var(--line);border-radius:14px;margin-bottom:16px}
 .tr-photo{margin:20px 0}
 .tr-main{padding:20px 0}
@@ -319,7 +280,6 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .trips-foot p{font-size:0.92rem;color:var(--ink-soft);max-width:56ch}
 @media(max-width:900px){
   .trips{padding:60px 0}
-  .trips-head{grid-template-columns:1fr;gap:10px}
   .trip-row{grid-template-columns:1fr;gap:0;align-items:start;padding:16px 16px 0 16px}
   .tr-photo{display:none}
   .tr-main{padding:0}
@@ -352,68 +312,31 @@ body.drawer-open .mobile-actions{visibility:hidden}
 
 /* WARBIRD */
 .warbird{background:var(--deep);color:var(--sand);display:grid;grid-template-columns:1fr 1.06fr;align-items:stretch}
-.wb-photo{min-height:620px;background:url('assets/sol-warbird.jpg') center 30%/cover}
+.wb-photo{min-height:520px;background:url('assets/sol-warbird.jpg') center 30%/cover}
 .wb-text{padding:clamp(52px,5.6vw,96px) clamp(34px,4.4vw,78px);display:flex;flex-direction:column;justify-content:center}
 .wb-reg{font-family:'JetBrains Mono',monospace;font-size:0.78rem;font-weight:500;letter-spacing:0.08em;color:rgba(244,239,230,0.55);margin-bottom:14px}
 .warbird h2{font-size:clamp(2rem,3.7vw,3.1rem);color:#fff;margin-bottom:8px;line-height:1.06}
 .wb-sub{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:500;color:var(--reef-lite);margin-bottom:22px;font-style:italic}
 .warbird p{font-size:1.02rem;color:rgba(244,239,230,0.82);line-height:1.72;margin-bottom:17px}
 .warbird p b{color:#fff;font-weight:700}
-.wb-specs{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 44px;margin:6px 0 26px;max-width:620px}
-.wb-specs li{display:flex;gap:13px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line-d);font-size:0.95rem;font-weight:500;color:rgba(244,239,230,0.94)}
 .wb-quote{margin:4px 0 26px;padding:18px 22px;background:rgba(244,239,230,0.06);border-radius:10px}
 .wb-quote p{font-size:1rem;color:#fff;font-style:italic;margin-bottom:8px;line-height:1.6}
 .wb-quote cite{font-style:normal;font-size:0.84rem;color:rgba(244,239,230,0.66)}
 .wb-ctas{display:flex;gap:12px;flex-wrap:wrap}
 @media(max-width:1000px){.warbird{grid-template-columns:1fr}.wb-photo{min-height:0;aspect-ratio:3/2}}
 @media(max-width:900px){.wb-text{padding:30px 22px 40px}.warbird p{font-size:0.96rem}.wb-ctas{flex-direction:column;align-items:stretch}.wb-ctas .btn{width:100%}}
-@media(max-width:620px){.wb-specs{gap:0 18px}.wb-specs li{font-size:0.86rem;padding:9px 0}}
 
 /* SOL */
-.sol{padding:110px 0}
+.sol{padding:96px 0}
 .sol-pull{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(1.7rem,3.5vw,2.85rem);color:var(--deep);line-height:1.2;max-width:22ch;margin-bottom:14px}
 .sol-pull b{font-style:normal;font-weight:600;color:var(--reef-deep)}
-.sol-cite{font-size:0.92rem;color:var(--ink-soft);margin-bottom:48px}
+.sol-cite{font-size:0.92rem;color:var(--ink-soft);margin-bottom:36px}
 .sol-cite a{color:var(--reef-deep);font-weight:600;border-bottom:1px solid rgba(10,107,92,0.35)}
 .sol-cite a:hover{border-color:var(--reef-deep)}
-.sol-grid{display:grid;grid-template-columns:1fr 0.86fr;gap:60px;align-items:start}
+.sol-body{max-width:68ch}
 .sol-body p{font-size:1.06rem;color:var(--ink-soft);line-height:1.76;margin-bottom:18px}
 .sol-body p b{color:var(--deep);font-weight:700}
-.read-more{display:none}
-@media(max-width:900px){.sol-more{max-height:0;overflow:hidden;transition:max-height .34s ease}.sol-more.open{max-height:none}.sol-body .m-only{display:inline-flex}.read-more{align-items:center;gap:9px;background:none;border:none;padding:6px 0;min-height:44px;color:var(--sun);font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer}.read-more i{transition:transform .3s}.read-more[aria-expanded=true] i{transform:rotate(45deg)}}
-.sol-side{background:var(--white);border:1px solid var(--line-soft);border-radius:12px;box-shadow:0 8px 24px rgba(20,33,31,0.05);padding:28px 28px 26px}
-.sol-side h4{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:1.15rem;color:var(--deep);margin-bottom:14px}
-.sol-side ul{list-style:none}
-.sol-side li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:0.95rem;color:var(--ink);line-height:1.55}
-.sol-side li:last-child{border-bottom:none;padding-bottom:0}
-.sol-side li b{font-weight:700}
-@media(max-width:940px){.sol-grid{grid-template-columns:1fr;gap:26px}}
-@media(max-width:900px){.sol{padding:60px 0}.sol-cite{margin-bottom:24px}.sol-body p{font-size:0.99rem}.sol-side{padding:20px 18px}}
-
-/* PROOF */
-.proof{padding:104px 0;background:var(--sand-2);border-top:1px solid var(--line-soft)}
-.rev-feature{max-width:900px;margin-bottom:50px}
-.rev-feature blockquote{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(1.4rem,2.8vw,2.2rem);line-height:1.3;color:var(--deep);margin-bottom:20px}
-.rev-feature cite{font-style:normal;font-size:0.94rem;font-weight:700;color:var(--ink);display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
-.rev-feature cite span{font-weight:500;color:var(--ink-soft)}
-.rev-feature .qsrc{margin-top:12px;font-size:0.84rem;color:var(--ink-soft)}
-.rev-feature .qsrc a{color:var(--reef-deep);font-weight:600;border-bottom:1px solid rgba(10,107,92,0.35)}
-.proof-bar{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding-top:24px;margin-bottom:18px;flex-wrap:wrap}
-.proof-bar h3{font-size:clamp(1.2rem,2vw,1.6rem);color:var(--deep)}
-.proof-bar h3 em{font-style:italic;font-weight:500;color:var(--reef)}
-.proof-bar p{font-size:0.88rem;color:var(--ink-soft)}
-.out-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.out-cell{background:var(--white);border:1px solid var(--line-soft);border-radius:12px;padding:22px 24px;box-shadow:0 8px 24px rgba(20,33,31,0.05)}
-.out-cell .oage{font-family:'Fraunces',Georgia,serif;font-size:1.9rem;font-weight:600;color:var(--reef);line-height:1;margin-bottom:10px}
-.out-cell .oage small{font-family:'Hanken Grotesk',sans-serif;font-size:0.46em;font-weight:600;color:var(--ink-soft);margin-left:6px}
-.out-cell b{display:block;font-size:1rem;color:var(--deep);margin-bottom:4px}
-.out-cell p{font-size:0.88rem;color:var(--ink-soft);line-height:1.56}
-.proof-src{margin-top:18px;font-size:0.84rem;color:var(--ink-soft);line-height:1.6}
-.proof-src a{color:var(--reef-deep);font-weight:600;border-bottom:1px solid rgba(10,107,92,0.35)}
-.ph-note{margin-top:20px;padding:15px 18px;border:1px dashed var(--line);border-radius:10px;background:rgba(248,244,234,0.6);font-size:0.87rem;color:var(--ink-soft);line-height:1.55}
-.ph-note b{color:var(--ink)}
-@media(max-width:1000px){.out-grid{grid-template-columns:1fr 1fr;gap:14px}}
-@media(max-width:900px){.proof{padding:58px 0}.rev-feature{margin-bottom:26px}.out-cell{padding:16px 16px}}
+@media(max-width:900px){.sol{padding:60px 0}.sol-cite{margin-bottom:24px}.sol-body p{font-size:0.99rem}}
 
 /* LOCATIONS */
 .locs{padding:104px 0}
@@ -487,7 +410,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .social-row{display:flex;gap:10px;margin-top:14px}
 .social-row a{width:42px;height:42px;border:1px solid var(--line-d);color:var(--sand);display:inline-flex;align-items:center;justify-content:center;font-size:1rem;transition:all .2s;border-radius:6px}
 .social-row a:hover{background:var(--sun);color:#fff;border-color:var(--sun);transform:translateY(-2px)}
-@media(max-width:900px){.contact{padding:60px 0}.contact-grid{grid-template-columns:1fr;gap:38px}.contact-right{border-left:none;border-top:1px solid var(--line-d);padding-left:0;padding-top:26px}}
+@media(max-width:900px){.contact{padding:60px 0}.contact-grid{grid-template-columns:1fr;gap:38px}.contact-right{border-left:none;border-top:1px solid var(--line-d);padding-left:0;padding-top:26px}.contact-right .c-block:nth-child(2){padding-bottom:0;border-bottom:none;margin-bottom:0}.contact-right .c-block:nth-child(2) .cl,.contact-right .c-block:nth-child(2) .crow{display:none}.contact-right .social-row{margin-top:0}.c-note{margin-top:18px}}
 @media(max-width:460px){.frow{grid-template-columns:1fr;gap:0}}
 
 /* FOOTER */
@@ -592,14 +515,14 @@ body.modal-open{overflow:hidden}
     <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
   <nav class="drawer-links">
-    <a href="#tours"><span class="dn">01</span>Tours &amp; Rates</a>
-    <a href="#training"><span class="dn">02</span>Flight Training</a>
-    <a href="#fleet"><span class="dn">03</span>The Fleet</a>
-    <a href="#warbird"><span class="dn">04</span>The Warbird</a>
-    <a href="#sol"><span class="dn">05</span>Who Teaches Here</a>
-    <a href="#locations"><span class="dn">06</span>Marathon &amp; Key West</a>
-    <a href="#faq"><span class="dn">07</span>FAQ</a>
-    <a href="#contact"><span class="dn">08</span>Book a Flight</a>
+    <a href="#tours">Tours &amp; Rates</a>
+    <a href="#discovery">Discovery Flight</a>
+    <a href="#training">Flight Training</a>
+    <a href="#fleet">The Fleet</a>
+    <a href="#warbird">The Warbird</a>
+    <a href="#locations">Marathon &amp; Key West</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
   </nav>
   <div class="drawer-footer">
     <a href="tel:+18445397247" class="drawer-phone">844-KEYS-AIR</a>
@@ -648,10 +571,6 @@ body.modal-open{overflow:hidden}
           <div class="mf"><b>2 airports</b><span>Marathon KMTH and Key West KEYW</span></div>
           <div class="mf"><b>10 aircraft</b><span>From a 1942 warbird to a twin</span></div>
         </div>
-      </div>
-      <div class="mech-note">
-        <b>Not sure which one you are?</b> If you came to the Keys on vacation, take the tour. If the tour got in your head, that is what the discovery flight is for. Nobody here will push you from one to the other.
-        <br><a href="#discovery" class="tlink">Pick your door <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
     </div>
   </div>
@@ -732,93 +651,40 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- TRAINING -->
-<section class="ladder-intro" id="training">
+<section class="train" id="training">
   <div class="wrap">
     <p class="ladder-quote">You can go from <b>never touched a yoke</b> to teaching it, without leaving the island chain.</p>
-    <p>Zero time through Certified Flight Instructor, plus the complex and multi-engine time in between. One instructor at a time, one on one, in the classroom and in the airplane. Pay as you progress. No deposits and no fixed start dates, so the pace is yours.</p>
-  </div>
-</section>
-
-<div class="bands">
-
-  <div class="band left">
-    <div class="band-photo" style="background-image:url('assets/cockpit-final.jpg')" role="img" aria-label="Instructor and student on final approach, runway centerline visible through the windscreen"></div>
-    <div class="band-text">
-      <span class="bnum">Step one, where everyone starts</span>
-      <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Discovery Flight<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
-      <div class="band-collapse"><div class="band-collapse-inner">
-      <p>The first one. You take the left seat, an instructor takes the right, and somewhere over the water they hand you the controls. It is not a ride. If you decide to carry on, the time is logged toward your Private certificate.</p>
-      <div class="bprice"><span class="bp">$298</span><span class="bl">one flight, per person, no deposit</span></div>
-      <a href="https://app.flightschedulepro.com/DiscoveryFlights/2c7c66c9-37ab-4746-b68e-c25c54c2e887" target="_blank" rel="noopener" class="tlink">Book a discovery flight <i class="fa-solid fa-arrow-right-long"></i></a>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="band right alt">
-    <div class="band-photo" style="background-image:url('assets/first-solo.jpg')" role="img" aria-label="A student celebrates after his first solo flight beside a blue and white Cessna at Marathon"></div>
-    <div class="band-text">
-      <span class="bnum">Step two, the first certificate</span>
-      <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Private Pilot Certificate<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
-      <div class="band-collapse"><div class="band-collapse-inner">
-      <p>Ground school and flight training to the certificate that lets you carry passengers. Written test prep with Gleim and Sporty's, one on one instruction, and a checkride you are genuinely ready for. You will solo out of an untowered field with real traffic and real Gulf weather, which is a better education than a controlled airport hands you.</p>
-      <div class="bprice"><span class="bp">From $265</span><span class="bl">per hour, aircraft and instructor. Pay as you go.</span></div>
-      <a href="#contact" class="tlink" data-want="Private pilot training">Ask what your ticket would cost <i class="fa-solid fa-arrow-right-long"></i></a>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="band left">
-    <div class="band-photo" style="background-image:url('assets/redbird-sim.jpg')" role="img" aria-label="A student flying the Redbird TD2 simulator on a wraparound triple-monitor setup at Marathon"></div>
-    <div class="band-text">
-      <span class="bnum">Step three, when the horizon disappears</span>
-      <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Instrument Rating<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
-      <div class="band-collapse"><div class="band-collapse-inner">
-      <p>Flying on instruments alone, which in South Florida means summer build-ups, marine layer and haze over water with no horizon. Approaches at Marathon and Key West, plus procedures in the Redbird TD2 simulator so you burn less avgas learning the ones that are all button-pushing.</p>
-      <div class="bprice"><span class="bp">Redbird TD2</span><span class="bl">on-site simulator, bookable on its own</span></div>
-      <a href="#contact" class="tlink" data-want="Instrument rating">Talk about an instrument plan <i class="fa-solid fa-arrow-right-long"></i></a>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="band right alt">
-    <div class="band-photo" style="background-image:url('assets/student-grad.jpg')" role="img" aria-label="A young Florida Keys Flight Academy student pilot standing beside a Cessna on the ramp"></div>
-    <div class="band-text">
-      <span class="bnum">Step four, getting paid to fly it</span>
-      <h3 class="band-h"><button class="band-toggle" type="button" aria-expanded="false">Commercial Pilot and CFI<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
-      <div class="band-collapse"><div class="band-collapse-inner">
-      <p>The certificate that lets you be paid to fly, then the one that lets you teach it. Commercial requires complex time and cross-country hours: the 1980 Cutlass covers the retractable-gear endorsement and the Cessna 310Q covers multi-engine, both in house. Several Keys students have gone from their first lesson here to a flight instructor certificate.</p>
-      <div class="bprice"><span class="bp">Complex &amp; twin</span><span class="bl">Cutlass RG and Cessna 310Q on the line</span></div>
-      <a href="#contact" class="tlink" data-want="Commercial or CFI">Plan a commercial track <i class="fa-solid fa-arrow-right-long"></i></a>
-      </div></div>
-    </div>
-  </div>
-
-</div>
-
-<!-- ALREADY A PILOT -->
-<section class="pilot">
-  <div class="wrap">
-    <h2>Already have a certificate? <em>Four things you can book this week.</em></h2>
-    <div class="pilot-grid">
-      <div class="pitem">
-        <h4>Flight Review</h4>
-        <p>The review that keeps you legal, flown somewhere worth flying.</p>
-        <span class="pp">From $265</span>
-      </div>
-      <div class="pitem">
-        <h4>Instrument Proficiency</h4>
-        <p>IPC to get current again, with approaches at both fields.</p>
-        <span class="pp">Call for the number</span>
-      </div>
-      <div class="pitem">
-        <h4>Rental Checkout</h4>
-        <p>Get checked out and take the airplane yourself. Renters insurance required.</p>
-        <span class="pp">$265 per pilot</span>
-      </div>
-      <div class="pitem">
-        <h4>Bring Your Own Plane</h4>
-        <p>Instruction in your own aircraft, plus a Pinch Hitter course for whoever rides right seat.</p>
-        <span class="pp">Call for details</span>
+    <p class="train-lede">Zero time through Certified Flight Instructor, one on one, in the classroom and in the airplane. Pay as you progress. No deposits and no fixed start dates.</p>
+    <div class="train-grid">
+      <figure class="train-fig">
+        <img src="assets/first-solo.jpg" alt="A student celebrates with both arms raised after his first solo flight while his instructor shakes his hand beside a Cessna at Marathon" loading="lazy" width="1500" height="1125">
+        <figcaption>First solo, Marathon. The handshake is the instructor's.</figcaption>
+      </figure>
+      <div class="train-list">
+        <div class="trow">
+          <div class="trow-main"><h3>Discovery Flight</h3><p>You take the left seat, an instructor takes the right, and over the water they hand you the controls. Logged toward your Private if you carry on.</p></div>
+          <div class="trow-side"><span class="tp">$298</span><span class="tl">per person, no deposit</span><a href="https://app.flightschedulepro.com/DiscoveryFlights/2c7c66c9-37ab-4746-b68e-c25c54c2e887" target="_blank" rel="noopener" class="tlink">Book it <i class="fa-solid fa-arrow-right-long"></i></a></div>
+        </div>
+        <div class="trow">
+          <div class="trow-main"><h3>Private Pilot Certificate</h3><p>Ground school and flight training to the certificate that lets you carry passengers. You solo out of an untowered field with real traffic and real Gulf weather.</p></div>
+          <div class="trow-side"><span class="tp">From $265</span><span class="tl">per hour, aircraft and instructor</span><a href="#contact" class="tlink" data-want="Private pilot training">Ask what it costs <i class="fa-solid fa-arrow-right-long"></i></a></div>
+        </div>
+        <div class="trow">
+          <div class="trow-main"><h3>Instrument Rating</h3><p>Summer build-ups, marine layer and haze with no horizon. Approaches at both fields, procedures in the Redbird TD2 simulator on site.</p></div>
+          <div class="trow-side"><span class="tp">Redbird TD2</span><span class="tl">simulator, bookable on its own</span><a href="#contact" class="tlink" data-want="Instrument rating">Talk about a plan <i class="fa-solid fa-arrow-right-long"></i></a></div>
+        </div>
+        <div class="trow">
+          <div class="trow-main"><h3>Commercial Pilot and CFI</h3><p>The 1980 Cutlass covers your complex endorsement and the Cessna 310Q covers multi-engine, both in house. Several Keys students have gone first lesson to CFI here.</p></div>
+          <div class="trow-side"><span class="tp">Complex &amp; twin</span><span class="tl">on the line, no mainland trip</span><a href="#contact" class="tlink" data-want="Commercial or CFI">Plan a track <i class="fa-solid fa-arrow-right-long"></i></a></div>
+        </div>
+        <div class="trow trow-pilot">
+          <div class="trow-main"><h3>Already fly?</h3><p>Flight reviews and rental checkouts from $265, instrument proficiency checks, instruction in your own aircraft, and a Pinch Hitter course for whoever rides right seat.</p></div>
+          <div class="trow-side"><span class="tp">From $265</span><span class="tl">renters insurance required to rent</span><a href="#contact" class="tlink" data-want="Flight review, IPC or rental checkout">Get checked out <i class="fa-solid fa-arrow-right-long"></i></a></div>
+        </div>
+        <blockquote class="train-quote">
+          <p>"Felt very comfortable with the instruction given and what to expect during the process. Only looking to get a private license for fun but like that they have instrument and commercial training levels available as well."</p>
+          <cite>Nico Rossi, Pembroke Pines, discovery flight at Marathon. 5 of 5 on <a href="https://www.tripadvisor.com/Attraction_Review-g34419-d30308630-Reviews-Florida_Keys_Flight_Academy-Marathon_Shores_Marathon_Florida_Keys_Florida.html" target="_blank" rel="noopener">TripAdvisor</a>, April 2025.</cite>
+        </blockquote>
       </div>
     </div>
   </div>
@@ -833,7 +699,7 @@ body.modal-open{overflow:hidden}
     </div>
 
     <div class="trip-group">
-      <div class="tg-label">Over the reef and the bridge</div>
+      <div class="tg-label"><h3>Over the reef and the bridge</h3><span>Three tours, 20 minutes to an hour</span></div>
       <div class="trip-row">
         <div class="tr-photo" style="background-image:url('assets/reef-lighthouse.jpg')" role="img" aria-label="Sombrero Reef Lighthouse standing above the living coral reef in turquoise water"></div>
         <div class="tr-main">
@@ -864,7 +730,7 @@ body.modal-open{overflow:hidden}
     </div>
 
     <div class="trip-group">
-      <div class="tg-label">Golden hour</div>
+      <div class="tg-label"><h3>Golden hour</h3><span>Private, timed to the actual sunset</span></div>
       <div class="trip-row">
         <div class="tr-photo" style="background-image:url('assets/sunset-flight.jpg')" role="img" aria-label="Sunset over the water in the Florida Keys with dramatic cloud banks"></div>
         <div class="tr-main">
@@ -877,7 +743,7 @@ body.modal-open{overflow:hidden}
     </div>
 
     <div class="trip-group">
-      <div class="tg-label">The warbird</div>
+      <div class="tg-label"><h3>The warbird</h3><span>1942 BT-13, by mission</span></div>
       <div class="trip-row">
         <div class="tr-photo" style="background-image:url('assets/sol-warbird.jpg')" role="img" aria-label="The restored 1942 Vultee BT-13 warbird on the ramp with an American flag flying from the cockpit"></div>
         <div class="tr-main">
@@ -928,14 +794,8 @@ body.modal-open{overflow:hidden}
     <div class="wb-reg">N67496 &middot; Vultee BT-13A &middot; 1942</div>
     <h2>The Vultee Vibrator.</h2>
     <div class="wb-sub">Not a fighter. A classroom.</div>
-    <p>Almost every American pilot who flew in the Second World War went through a BT-13.<span class="m-trim"> It sat in the middle of the training pipeline, after the Stearman and before the AT-6: the first airplane with real horsepower, a constant-speed prop and a radio, and it</span><span class="m-only"> It</span> shook enough at certain power settings to earn its nickname.</p>
+    <p>Almost every American pilot who flew in the Second World War went through a BT-13. It sat between the Stearman and the AT-6 in the training pipeline, and it shook enough at certain power settings to earn its nickname.</p>
     <p><b>Which makes it the right airplane for this place.</b> Eighty years on, the BT-13 is still doing the job it was built for, at a flight school, teaching people to fly. Ours is a restored 1942 airframe with its training-command markings still on the tail.</p>
-    <ul class="wb-specs">
-      <li>Pratt &amp; Whitney R-985 radial</li>
-      <li>Registered N67496, built 1942</li>
-      <li>Training-command markings, tail 21290</li>
-      <li>Pilots and non-pilots welcome</li>
-    </ul>
     <div class="wb-quote">
       <p>"Loved every minute of it! Sol was so knowledgeable about the history of the plane and you definitely feel like a WWII pilot in the cockpit."</p>
       <cite>Verified traveller review, TripAdvisor, April 2025</cite>
@@ -952,49 +812,10 @@ body.modal-open{overflow:hidden}
   <div class="wrap">
     <p class="sol-pull">"I believe there's a <b>fountain of youth</b> somewhere in here."</p>
     <p class="sol-cite">Sol Bradman, owner, on why he keeps teaching. Quoted in <a href="https://keysweekly.com/42/florida-keys-flight-academy-is-churning-out-talented-young-pilots/" target="_blank" rel="noopener">Keys Weekly</a>.</p>
-    <div class="sol-grid">
-      <div class="sol-body">
-        <p><b>Sol Bradman has been flying in the Florida Keys since 1984.</b> He instructed at this academy before he bought it, and has owned and run it since November 2020. The office is upstairs at the EAA Air Museum at Marathon airport, which tells you most of what you need to know about how this place operates.</p>
-        <div class="sol-more" id="solMore"><div class="sol-more-inner">
-        <p>It is a small operation on purpose. You are taught by the person who owns the airplanes, not assigned to whichever instructor is rotating through on the way to an airline seniority list. <span class="m-trim">There are no deposits and no enrolment fees. You pay as you progress, and if life gets in the way for three months, your money is not sitting in someone else's account.</span></p>
-        <p>The other half of what happens here has nothing to do with revenue. The academy runs Young Eagles flights for kids aged 8 to 17, has helped set up an aviation club at Key West High School, and has put Keys teenagers into the left seat who have since gone on to instrument ratings and flight instructor certificates before they finished school.</p>
-        </div></div>
-        <button class="read-more m-only" type="button" aria-expanded="false" aria-controls="solMore">Read more about Sol <i class="fa-solid fa-plus" aria-hidden="true"></i></button>
-      </div>
-      <aside class="sol-side">
-        <h4>What that looks like in practice</h4>
-        <ul>
-          <li><span><b>200+ kids flown free each year</b> through Young Eagles, twice yearly, ages 8 to 17.</span></li>
-          <li><span><b>Aviation club at Key West High School</b>, set up with the academy's help.</span></li>
-          <li><span><b>No deposits.</b> Pay as you progress, not up front.</span></li>
-          <li><span><b>Buzza Foundation scholarships</b> have funded local students training here.</span></li>
-          <li><span><b>Marathon is untowered.</b> You will learn to fit into real traffic on your own radio calls.</span></li>
-        </ul>
-      </aside>
+    <div class="sol-body">
+      <p><b>Sol Bradman has been flying in the Florida Keys since 1984.</b> He instructed at this academy before he bought it, and has owned and run it since November 2020. The office is upstairs at the EAA Air Museum at Marathon airport. You are taught by the person who owns the airplanes, not assigned to whichever instructor is rotating through on the way to an airline seat.</p>
+      <p>The other half of what happens here has nothing to do with revenue. The academy flies 200+ kids a year free through Young Eagles, helped set up the aviation club at Key West High School, and has put Keys teenagers into the left seat who earned instrument ratings and instructor certificates before they finished school.</p>
     </div>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section class="proof">
-  <div class="wrap">
-    <div class="rev-feature">
-      <blockquote>"Felt very comfortable with the instruction given and what to expect during the process. Only looking to get a private license for fun but like that they have instrument and commercial training levels available as well."</blockquote>
-      <cite>Nico Rossi <span>&middot; Pembroke Pines, FL &middot; discovery flight at Marathon</span></cite>
-      <p class="qsrc">5 of 5 bubbles, posted April 2025 on <a href="https://www.tripadvisor.com/Attraction_Review-g34419-d30308630-Reviews-Florida_Keys_Flight_Academy-Marathon_Shores_Marathon_Florida_Keys_Florida.html" target="_blank" rel="noopener">TripAdvisor</a>.</p>
-    </div>
-    <div class="proof-bar">
-      <h3>The Keys teenagers <em>who learned here</em></h3>
-      <p>Not testimonials the academy wrote. Local reporting on real students.</p>
-    </div>
-    <div class="out-grid">
-      <div class="out-cell"><div class="oage">19<small>CFI</small></div><b>Ethan Sauders</b><p>Marathon High class of 2024. Trained here and earned a Certified Flight Instructor certificate.</p></div>
-      <div class="out-cell"><div class="oage">17<small>PPL + IR</small></div><b>Aaron Anstett</b><p>Coral Shores. Private licence and instrument rating at 17, the legal minimum age for each.</p></div>
-      <div class="out-cell"><div class="oage">18<small>Student</small></div><b>Courtney Grabus</b><p>Key West High senior, training here on a Buzza Foundation scholarship.</p></div>
-      <div class="out-cell"><div class="oage">17<small>Solo</small></div><b>Eagan Cunningham</b><p>Ramrod Key. Flew his second solo up the chain to Duck Key.</p></div>
-    </div>
-    <p class="proof-src">Reported by <a href="https://keysweekly.com/42/meet-the-teen-pilots-changing-the-skies-with-the-florida-keys-flight-academy/" target="_blank" rel="noopener">Keys Weekly</a>, April 2025 and August 2022. Names published in the paper.</p>
-    <div class="ph-note"><b>[VERIFIED RATING NEEDED]</b> The academy has more reviews on Google, Yelp and Facebook that are not surfaced anywhere. Once the owner confirms the exact star rating and count, they belong here and in the structured data. Nothing has been rounded up or invented in the meantime.</div>
   </div>
 </section>
 
@@ -1056,16 +877,13 @@ body.modal-open{overflow:hidden}
 
         <div class="acc-item"><button class="acc-head" aria-expanded="false">Your aircraft are old. Should that worry me? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">It is a fair question and the answer is no. Age of airframe is not what makes a training aircraft safe. Every aircraft on the line is maintained under FAA rules and inspected on the same schedule as any other aircraft in service, and the Cessna 172 is one of the most proven training designs ever built. What an older fleet does change is what you learn: steam gauges, stick and rudder, and a paper chart, which makes you a better pilot than an autopilot and a moving map do. Come and look at them before you book anything.</div></div></div>
 
-        <div class="acc-item"><button class="acc-head" aria-expanded="false">Can I get multi-engine and complex time without leaving the Keys? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Yes, and it is unusual for a school this size. The 1980 Cessna 172RG Cutlass has retractable gear and a constant-speed prop, which covers the complex endorsement that a Commercial certificate needs. The Cessna 310Q is a piston twin, which covers multi-engine time. Most small schools send you to the mainland for both.</div></div></div>
-
+        
         <div class="acc-item"><button class="acc-head" aria-expanded="false">Do you fly the warbird with passengers, or only pilots? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Both. You do not need a licence to ride in the 1942 BT-13, and there are multiple mission packages depending on how much of the flying you want to do. If you are a pilot, you can fly it. Pricing depends on the mission, so call and say what you are after.</div></div></div>
 
-        <div class="acc-item"><button class="acc-head" aria-expanded="false">I already fly. What can you do for me? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Flight reviews from $265, instrument proficiency checks, and a rental checkout at $265 per pilot that lets you take an aircraft on your own. Renters insurance is required for that, with minimum coverage of $250k/$25k bodily injury and property damage, $1,000 medical, and $50,000 physical damage to non-owned aircraft. Instructors will also teach in your own aircraft, and there is a Pinch Hitter course covering navigation, radio and landings for whoever normally rides in the right seat.</div></div></div>
-
+        
         <div class="acc-item"><button class="acc-head" aria-expanded="false">What happens if the weather turns on the day I booked? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">You do not go, and you are not charged for a flight that did not happen. Keys weather moves fast, especially in summer, and the decision is made by the pilot on the day. A cancelled tour gets rescheduled. If you are visiting on a tight window, book earlier in your trip so there is room to move it.</div></div></div>
 
-        <div class="acc-item"><button class="acc-head" aria-expanded="false">Where do I stay if I am coming here to train? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Keys accommodation is genuinely hard to find, particularly in season, and the academy will help you sort something out for the length of your training rather than leaving you to it. Mention your dates when you get in touch.</div></div></div>
-
+        
       </div>
     </div>
   </div>
@@ -1373,11 +1191,8 @@ body.modal-open{overflow:hidden}
     {"@type":"Question","name":"How old do you have to be to fly with Florida Keys Flight Academy?","acceptedAnswer":{"@type":"Answer","text":"Scenic tours are all ages. There is no minimum age to begin flight lessons. The FAA requires you to be 16 to fly solo and 17 for a private pilot certificate. The academy also flies children aged 8 to 17 free through the Young Eagles programme twice a year."}},
     {"@type":"Question","name":"What does a private pilot certificate cost at Florida Keys Flight Academy?","acceptedAnswer":{"@type":"Answer","text":"Flight time starts at $265 per hour including aircraft and instructor. The total depends on how often you fly, because students who fly two or three times a week finish in fewer hours. There are no deposits and no enrolment fee, so you pay as you progress."}},
     {"@type":"Question","name":"Your aircraft are old. Should that worry me?","acceptedAnswer":{"@type":"Answer","text":"No. Age of airframe is not what makes a training aircraft safe. Every aircraft is maintained and inspected under FAA rules on the same schedule as any other aircraft in service, and the Cessna 172 is one of the most proven training designs ever built. An older fleet means you learn steam gauges, stick and rudder, and paper chart navigation."}},
-    {"@type":"Question","name":"Can I get multi-engine and complex time without leaving the Florida Keys?","acceptedAnswer":{"@type":"Answer","text":"Yes. The 1980 Cessna 172RG Cutlass has retractable gear and a constant-speed propeller, which covers the complex endorsement required for a Commercial certificate. The Cessna 310Q is a piston twin, which covers multi-engine time. Most small schools send students to the mainland for both."}},
     {"@type":"Question","name":"Do you fly the warbird with passengers, or only pilots?","acceptedAnswer":{"@type":"Answer","text":"Both. You do not need a licence to ride in the 1942 Vultee BT-13, and there are multiple mission packages depending on how much of the flying you want to do. Pilots can fly it. Pricing depends on the mission."}},
-    {"@type":"Question","name":"I already have a pilot certificate. What can Florida Keys Flight Academy do for me?","acceptedAnswer":{"@type":"Answer","text":"Flight reviews from $265, instrument proficiency checks, and a rental checkout at $265 per pilot. Renters insurance is required for rental, with minimum coverage of $250k/$25k bodily injury and property damage, $1,000 medical, and $50,000 physical damage to non-owned aircraft. Instructors also teach in your own aircraft, and a Pinch Hitter course is available for passengers."}},
-    {"@type":"Question","name":"What happens if the weather turns on the day I booked?","acceptedAnswer":{"@type":"Answer","text":"You do not fly and you are not charged for a flight that did not happen. Keys weather moves fast in summer and the decision is made by the pilot on the day. A cancelled tour is rescheduled. Visitors on a tight schedule should book earlier in their trip."}},
-    {"@type":"Question","name":"Where do I stay if I am coming to the Florida Keys to train?","acceptedAnswer":{"@type":"Answer","text":"Keys accommodation is hard to find, particularly in season, and the academy will help arrange lodging for the length of your flight training. Mention your dates when you get in touch."}}
+    {"@type":"Question","name":"What happens if the weather turns on the day I booked?","acceptedAnswer":{"@type":"Answer","text":"You do not fly and you are not charged for a flight that did not happen. Keys weather moves fast in summer and the decision is made by the pilot on the day. A cancelled tour is rescheduled. Visitors on a tight schedule should book earlier in their trip."}}
   ]
 }
 </script>
@@ -1426,24 +1241,6 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     });
   });
 
-  var bands=document.querySelectorAll('.band');
-  var bandMQ=window.matchMedia('(max-width:900px)');
-  function setBand(b,open){b.classList.toggle('open',open);var t=b.querySelector('.band-toggle'),c=b.querySelector('.band-collapse');t.setAttribute('aria-expanded',open?'true':'false');c.style.maxHeight=(open&&bandMQ.matches)?c.scrollHeight+'px':null;}
-  bands.forEach(function(b,i){
-    b.querySelector('.band-toggle').addEventListener('click',function(){
-      if(!bandMQ.matches)return;
-      var wasOpen=b.classList.contains('open');
-      bands.forEach(function(o){setBand(o,false);});
-      if(!wasOpen){setBand(b,true);}
-    });
-  });
-  function syncBands(){if(bandMQ.matches){bands.forEach(function(b,i){setBand(b,i===0);});}else{bands.forEach(function(b){b.classList.remove('open');b.querySelector('.band-collapse').style.maxHeight=null;b.querySelector('.band-toggle').setAttribute('aria-expanded','false');});}}
-  syncBands();
-  bandMQ.addEventListener?bandMQ.addEventListener('change',syncBands):bandMQ.addListener(syncBands);
-
-  var rm=document.querySelector('.read-more'),solMore=document.getElementById('solMore');
-  if(rm&&solMore){rm.addEventListener('click',function(){var open=rm.getAttribute('aria-expanded')==='true';rm.setAttribute('aria-expanded',open?'false':'true');if(open){solMore.style.maxHeight=solMore.scrollHeight+'px';requestAnimationFrame(function(){solMore.classList.remove('open');solMore.style.maxHeight='0px';});rm.firstChild.textContent='Read more about Sol ';}else{solMore.style.maxHeight=solMore.scrollHeight+'px';solMore.addEventListener('transitionend',function h(){solMore.classList.add('open');solMore.style.maxHeight='';solMore.removeEventListener('transitionend',h);});rm.firstChild.textContent='Show less ';}});}
-
   var film=document.getElementById('film');
   var fPrev=document.getElementById('filmPrev');
   var fNext=document.getElementById('filmNext');
@@ -1473,7 +1270,6 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     clearTimeout(rsz);
     rsz=setTimeout(function(){
       document.querySelectorAll('.acc-item.open .acc-body').forEach(function(b){b.style.maxHeight=b.scrollHeight+'px';});
-      if(bandMQ.matches){document.querySelectorAll('.band.open .band-collapse').forEach(function(c){c.style.maxHeight=c.scrollHeight+'px';});}
     },120);
   });
 
@@ -1517,6 +1313,7 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
   calPrevB.addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);renderCal();});
   calNextB.addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);renderCal();});
   function openBk(trip){
+    if(drawer.classList.contains('open'))closeDrawer();
     if(trip){var sel=document.getElementById('bk-trip');Array.prototype.forEach.call(sel.options,function(o){if(o.text===trip){sel.selectedIndex=o.index;}});}
     bkOverlay.classList.add('open');document.body.classList.add('modal-open');
     bkStatus.className='bk-status';
