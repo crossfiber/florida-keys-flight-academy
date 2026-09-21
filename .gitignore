@@ -1,2 +1,11 @@
 credentials.md
+README.md
+design-direction.md
+borrowed-patterns.md
+qa/
+_research/
+_RecycleBin/
+swipes/
+.DS_Store
+*.log
 node_modules/
