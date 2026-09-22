@@ -61,7 +61,7 @@
 }
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 20px);overflow-x:clip}
 @media(max-width:900px){html{scroll-padding-top:calc(var(--nav-h-sm) + 20px)}}
-body{font-family:var(--f);color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--f);color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:var(--f);font-stretch:118%;font-weight:750;line-height:1.06;letter-spacing:-0.02em;color:var(--ink)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -155,28 +155,30 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .flights{padding:96px 0 90px}
 .fgroup{display:grid;grid-template-columns:250px 1fr;gap:40px;padding:30px 0;border-top:1px solid var(--line)}
 .fgroup:last-of-type{border-bottom:1px solid var(--line)}
+.fg-title{padding-top:12px}
 .fg-title h3{font-size:1.4rem;margin-bottom:6px}
 .fg-title p{font-size:0.92rem;color:var(--ink-soft);line-height:1.5}
-.frow{display:grid;grid-template-columns:1fr 90px 90px 104px;gap:18px;align-items:center;padding:14px 0}
+.frow{display:grid;grid-template-columns:minmax(0,1fr) 88px 80px 100px;gap:20px;align-items:center;padding:14px 0}
 .frow + .frow{border-top:1px solid var(--line-soft)}
-.frow .fn{font-weight:700;font-size:1.08rem;line-height:1.3}
-.frow .fr{display:block;font-weight:400;font-size:0.92rem;color:var(--ink-soft);margin-top:2px}
-.frow .ft{font-size:0.95rem;color:var(--ink-soft)}
-.frow .fp{font-stretch:112%;font-weight:750;font-size:1.3rem;color:var(--navy);text-align:right}
-.frow .fb{min-height:42px;padding:8px 18px;font-size:0.92rem;box-shadow:none}
+.frow .fn{font-weight:700;font-size:1.08rem;line-height:1.3;min-width:0}
+.frow .fr{display:block;font-weight:400;font-size:0.92rem;color:var(--ink-soft);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frow .ft{font-size:0.95rem;color:var(--ink-soft);white-space:nowrap}
+.frow .fp{font-stretch:112%;font-weight:750;font-size:1.3rem;color:var(--navy);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.frow .fb{width:100%;min-height:42px;padding:8px 12px;font-size:0.92rem;box-shadow:none}
 .flights-foot{margin-top:24px;font-size:0.95rem;color:var(--ink-soft)}
 .flights-foot a{color:var(--navy);font-weight:700;border-bottom:1px solid rgba(0,68,106,0.3)}
 @media(max-width:900px){
   .flights{padding:56px 0 50px}
   .fgroup{grid-template-columns:1fr;gap:6px;padding:22px 0 10px}
+  .fg-title{padding-top:0}
   .fg-title h3{font-size:1.2rem;margin-bottom:2px}
-  .frow{grid-template-columns:1fr auto;grid-template-areas:"n n" "m b";gap:8px 12px;padding:12px 0}
+  .frow{grid-template-columns:minmax(0,1fr) 88px;grid-template-areas:"n p" "t b";gap:4px 14px;align-items:center;padding:14px 0}
   .frow .fn{grid-area:n}
-  .frow .fm{grid-area:m;display:flex;gap:14px;align-items:baseline}
-  .frow .fb{grid-area:b}
-  .frow .fp{text-align:left;font-size:1.15rem}
+  .frow .ft{grid-area:t;font-size:0.9rem}
+  .frow .fp{grid-area:p;font-size:1.15rem}
+  .frow .fb{grid-area:b;min-height:40px}
 }
-@media(min-width:901px){.frow .fm{display:contents}}
+.frow .fm{display:contents}
 
 /* RIDE OR FLY */
 .split{padding:96px 0;background:var(--sky)}
@@ -200,7 +202,8 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .train-fig img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:20px}
 .train-fig figcaption{font-size:0.9rem;color:var(--ink-soft);padding:10px 2px 0}
 .plan{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);background:linear-gradient(90deg,var(--navy),var(--navy)) no-repeat 18px 17px/calc(80% + 1px) 2px}
-.leg{padding-right:22px}
+.leg{padding-right:22px;display:flex;flex-direction:column;align-items:flex-start}
+.leg .lp,.leg .tlink{margin-top:auto;line-height:1.5}
 .leg .dot{width:36px;height:36px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 2px var(--navy);display:flex;align-items:center;justify-content:center;font-weight:750;font-size:0.9rem;color:var(--navy);margin-bottom:16px}
 .leg:first-child .dot{background:var(--navy);color:#fff}
 .leg:last-child .dot{background:var(--palm);box-shadow:none;color:#fff}
@@ -215,7 +218,8 @@ body.drawer-open .mobile-actions{visibility:hidden}
   .train{padding:56px 0 52px}
   .train-top p{font-size:1rem}
   .plan{grid-template-columns:1fr;background:linear-gradient(var(--navy),var(--navy)) no-repeat 17px 18px/2px calc(100% - 40px)}
-  .leg{display:grid;grid-template-columns:36px 1fr;gap:0 14px;padding:0 0 18px}
+  .leg{display:grid;grid-template-columns:36px 1fr;gap:0 14px;padding:0 0 18px;align-items:start}
+  .leg .lp,.leg .tlink{margin-top:0}
   .leg .dot{grid-row:span 3;margin:0}
   .leg h3{font-size:1.06rem;margin:7px 0 4px}
   .leg p{font-size:0.9rem;margin-bottom:4px}
@@ -300,6 +304,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .form-status.success{background:#fff;color:var(--ink)}
 .form-status.error{background:#FBEAE7;color:#8C2F24}
 .form-status a{color:var(--orange);font-weight:700}
+.faq{position:sticky;top:calc(var(--nav-h) + 28px)}
 .faq h2{font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:18px}
 .accordion{border-top:1px solid var(--line)}
 .acc-item{border-bottom:1px solid var(--line)}
@@ -312,7 +317,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .acc-body-inner{padding:0 2px 20px;color:var(--ink-soft);font-size:0.98rem;line-height:1.65;max-width:58ch}
 .faq-call{margin-top:22px;font-size:0.97rem;color:var(--ink-soft)}
 .faq-call a{color:var(--navy);font-weight:700}
-@media(max-width:1000px){.contact-grid{grid-template-columns:1fr;gap:44px}}
+@media(max-width:1000px){.contact-grid{grid-template-columns:1fr;gap:44px}.faq{position:static}}
 @media(max-width:900px){.contact{padding:56px 0}.form-card{padding:20px 18px}.acc-head{font-size:0.98rem;padding:16px 2px}}
 @media(max-width:460px){.fpair{grid-template-columns:1fr;gap:0}}
 
@@ -443,7 +448,7 @@ body.modal-open{overflow:hidden}
     </div>
     <figure class="hero-fig">
       <img src="assets/reef-lighthouse.jpg" alt="Sombrero Reef Lighthouse standing in turquoise water over the living coral reef off Marathon, seen from the air" width="1080" height="540" fetchpriority="high">
-      <figcaption><span><b>Sombrero Reef Lighthouse,</b> a few minutes after takeoff from Marathon. Every scenic tour flies over it.</span><span><b>Owner-flown since 1984.</b> Ten aircraft, no deposits on training.</span></figcaption>
+      <figcaption><span><b>Sombrero Reef Lighthouse.</b> Every scenic tour flies over it.</span><span><b>Owner-flown since 1984.</b> Ten aircraft, no deposits on training.</span></figcaption>
     </figure>
   </div>
 </header>
@@ -457,20 +462,20 @@ body.modal-open{overflow:hidden}
     </div>
 
     <div class="fgroup">
-      <div class="fg-title"><h3>Scenic tours</h3><p>Over the reef and the Seven Mile Bridge</p></div>
+      <div class="fg-title"><h3>Scenic tours</h3><p>Over the reef and the bridge</p></div>
       <div>
         <div class="frow">
-          <div class="fn">Sombrero Lighthouse<span class="fr">The reef, the lighthouse and a pass over the bridge</span></div>
+          <div class="fn">Sombrero Lighthouse<span class="fr">The reef and the lighthouse</span></div>
           <div class="fm"><span class="ft">20 min</span><span class="fp">$299</span></div>
           <button class="btn fb" data-book="Sombrero Lighthouse Tour ($299)" aria-label="Book the Sombrero Lighthouse tour, $299">Book</button>
         </div>
         <div class="frow">
-          <div class="fn">Key Hopping the Middle Keys<span class="fr">Duck Key, Pigeon Key, sharks and rays from above</span></div>
+          <div class="fn">Key Hopping the Middle Keys<span class="fr">Duck Key and Pigeon Key</span></div>
           <div class="fm"><span class="ft">40 min</span><span class="fp">$399</span></div>
           <button class="btn fb" data-book="Key Hopping the Middle Keys ($399)" aria-label="Book Key Hopping the Middle Keys, $399">Book</button>
         </div>
         <div class="frow">
-          <div class="fn">7 Mile Bridge Run<span class="fr">The whole bridge, Bahia Honda and Fred the Tree</span></div>
+          <div class="fn">7 Mile Bridge Run<span class="fr">Bahia Honda and the full bridge</span></div>
           <div class="fm"><span class="ft">1 hour</span><span class="fp">$499</span></div>
           <button class="btn fb" data-book="7 Mile Bridge Run ($499)" aria-label="Book the 7 Mile Bridge Run, $499">Book</button>
         </div>
@@ -478,10 +483,10 @@ body.modal-open{overflow:hidden}
     </div>
 
     <div class="fgroup">
-      <div class="fg-title"><h3>Golden hour</h3><p>Private, timed to the real sunset</p></div>
+      <div class="fg-title"><h3>Golden hour</h3><p>A private flight at dusk</p></div>
       <div>
         <div class="frow">
-          <div class="fn">Sunset Celebration<span class="fr">Wheels up about thirty minutes before sunset</span></div>
+          <div class="fn">Sunset Celebration<span class="fr">Timed to the real sunset</span></div>
           <div class="fm"><span class="ft">45 min</span><span class="fp">$449</span></div>
           <button class="btn fb" data-book="Florida Keys Sunset Celebration ($449)" aria-label="Book the Sunset Celebration, $449">Book</button>
         </div>
@@ -492,12 +497,12 @@ body.modal-open{overflow:hidden}
       <div class="fg-title"><h3>You fly it</h3><p>No licence needed for either</p></div>
       <div>
         <div class="frow">
-          <div class="fn">Discovery Flight<span class="fr">Left seat, an instructor beside you, logged time</span></div>
+          <div class="fn">Discovery Flight<span class="fr">You take the controls</span></div>
           <div class="fm"><span class="ft">Lesson</span><span class="fp">$298</span></div>
           <button class="btn fb" data-book="Discovery Flight ($298)" aria-label="Book a discovery flight, $298">Book</button>
         </div>
         <div class="frow">
-          <div class="fn">Warbird, 1942 BT-13<span class="fr">The WWII trainer. Ride along, or fly it if you are a pilot</span></div>
+          <div class="fn">Warbird BT-13<span class="fr">The 1942 WWII trainer</span></div>
           <div class="fm"><span class="ft">By mission</span><span class="fp">Call</span></div>
           <button class="btn fb" data-book="Warbird Experience (BT-13)" aria-label="Ask about a warbird mission">Ask</button>
         </div>
