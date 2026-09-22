@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crossfiber.github.io/florida-keys-flight-academy/sitemap.xml
